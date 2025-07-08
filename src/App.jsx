@@ -8,12 +8,6 @@ import fondo from '../src/assets/underConst.jpg';
 function App() {
   return (
     <div className='app-container'>
-            <div
-        className="background-blur"
-        style={{
-          backgroundImage: {fondo}
-        }}
-      ></div>
       <Header/>
       <Router>
         <Routes>
@@ -21,7 +15,7 @@ function App() {
           {/* Podés agregar más rutas acá */}
         </Routes>
       </Router>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }

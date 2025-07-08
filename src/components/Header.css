@@ -1,0 +1,10 @@
+.borde{
+    border: dashed darksalmon 3px;
+}
+.titulo h1,
+.titulo h5 {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  color: rgb(193, 194, 221);
+}

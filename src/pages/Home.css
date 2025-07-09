@@ -5,6 +5,9 @@ main {
   height: 100vh; /* ocupa toda la altura visible */
   padding: 1rem;
   box-sizing: border-box;
+  margin-top: 4vw;
+  background-color: rgb(30, 65, 67);
+
 }
 
 main img {
@@ -12,5 +15,6 @@ main img {
   height: auto;
   max-height: 80vh;
   object-fit: contain;
+  border:  dashed 3px rgb(99, 99, 159)
 }
 

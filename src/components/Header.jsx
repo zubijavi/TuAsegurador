@@ -2,7 +2,7 @@ import './Header.css' // si tenés estilos personalizados
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-md navbar-dark fixed-top " id="banner">
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top " id="banner">
       <div className="container">
         <div className='titulo'>
           <h1>JAVIER ZUBILLAGA</h1>
@@ -25,7 +25,7 @@ const Header = () => {
         </button>
 
         {/* Navbar links */}
-        <div className="collapse navbar-collapse" id="collapsibleNavbar">
+        <div className="collapse navbar-collapse bg-dark" id="collapsibleNavbar">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <a className="nav-link" href="#">Link</a>

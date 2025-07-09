@@ -1,11 +1,25 @@
 .borde{
     border: dashed darksalmon 3px;
 }
+nav{
+    /* padding: 0 !important; */
+}
+.titulo{
+  display: flex;
+  width: 32vw;
+  align-items: center;
+  /* border: dashed darksalmon 3px; */
+  justify-content: space-around;
 
+}
 .titulo h1,
 .titulo h5 {
   margin: 0 !important;
   padding: 0 !important;
   line-height: 1 !important;
   color: rgb(193, 194, 221);
+}
+.titulo img {
+  height: 3.5vw;
+  filter: brightness(0) saturate(100%) invert(94%) sepia(7%) saturate(1369%) hue-rotate(208deg) brightness(97%) contrast(85%);
 }

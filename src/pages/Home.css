@@ -15,6 +15,5 @@ main img {
   height: auto;
   max-height: 80vh;
   object-fit: contain;
-  border:  dashed 3px rgb(99, 99, 159)
 }
 

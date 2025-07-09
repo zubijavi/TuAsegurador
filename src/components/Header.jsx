@@ -1,17 +1,18 @@
-import './Header.css' // si tenés estilos personalizados
+import './Header.css'
+import lauburu from '../assets/laubu.png'
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top " id="banner">
-      <div className="container">
-        <div className='titulo'>
-          <h1>JAVIER ZUBILLAGA</h1>
-          <h5>Productor de Seguros</h5>
-
+    <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top no-space" id="banner">
+      <div className="container-fluid no-space">
+        <div className="titulo no-space">
+          <div className="no-space">
+            <h1 className="no-space">JAVIER ZUBILLAGA</h1>
+            <h5 className="no-space">Productor de Seguros</h5>
+          </div>
+          <img src={lauburu} alt="" />
         </div>
-        {/* Brand */}
 
-        {/* Toggler Button */}
         <button
           className="navbar-toggler"
           type="button"
@@ -24,19 +25,11 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Navbar links */}
-        <div className="collapse navbar-collapse bg-dark" id="collapsibleNavbar">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item">
-              <a className="nav-link" href="#">Link</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Link</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Link</a>
-            </li>
-            {/* Dropdown */}
+        <div className="collapse navbar-collapse bg-dark no-space" id="collapsibleNavbar">
+          <ul className="navbar-nav ms-auto no-space">
+            <li className="nav-item"><a className="nav-link" href="#">Link</a></li>
+            <li className="nav-item"><a className="nav-link" href="#">Link</a></li>
+            <li className="nav-item"><a className="nav-link" href="#">Link</a></li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"

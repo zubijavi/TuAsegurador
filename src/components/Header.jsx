@@ -6,11 +6,11 @@ const Header = () => {
     <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top no-space" id="banner">
       <div className="container-fluid no-space">
         <div className="titulo no-space">
-          <div className="no-space">
-            <h1 className="no-space">JAVIER ZUBILLAGA</h1>
-            <h5 className="no-space">Productor de Seguros</h5>
-          </div>
           <img src={lauburu} alt="" />
+          <div className="no-space">
+            {/* <h1 className="no-space">JAVIER ZUBILLAGA</h1> */}
+            {/* <h5 className="no-space">Productor de Seguros</h5> */}
+          </div>
         </div>
 
         <button

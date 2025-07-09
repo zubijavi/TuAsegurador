@@ -1,9 +1,6 @@
 .borde{
     border: dashed darksalmon 3px;
 }
-nav{
-    /* padding: 0 !important; */
-}
 .titulo{
   display: flex;
   width: 32vw;

@@ -18,3 +18,8 @@ footer img {
   height: 3vw;
   filter: invert(1); /* invierte los colores */
 }
+
+@media (max-width: 768px) {
+  footer {
+  }
+}

@@ -3,10 +3,15 @@
 body {
   font-family: 'Raleway', sans-serif !important;
   background-image: url('/underConst.jpg');
-  background-size: cover;
-  background-position: center;
+  background-size: cover; /* o contain */
+  background-position: center center;
   background-repeat: no-repeat;
   min-height: 100vh;
   margin: 0;
-
+}
+@media (max-width: 600px) {
+  body {
+    background-size: cover; /* cambia a contain para que no se recorte */
+    background-position: center; /* podés mover el foco */
+  }
 }

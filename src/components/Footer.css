@@ -1,4 +1,20 @@
 footer {
-    color: rgb(63, 63, 63);
-    text-align: center;
+    color: rgb(0, 0, 0);
+    display: flex;
+    padding-right: 3vw;
+    justify-content: end;
+    align-items: center;
+    gap: 1.5vw;
+    color: rgb(225, 225, 225);
+}
+footer h1{
+  font-size: 1.5rem;
+}
+footer h5 {
+      font-size: .8rem;
+}
+
+footer img {
+  height: 3vw;
+  filter: invert(1); /* invierte los colores */
 }

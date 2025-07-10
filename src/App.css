@@ -1,13 +1,12 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-} */
- /* Asegura que el html y body ocupen toda la altura */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap');
 
+body {
+  font-family: 'Raleway', sans-serif !important;
+  background-image: url('/underConst.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
 
-
-
-
-
+}

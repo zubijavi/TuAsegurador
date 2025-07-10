@@ -1,6 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
 .borde {
   border: dashed darksalmon 3px;
 }
+
+nav {
+  margin: 0 6vw !important;
+  transition: background-color 0.3s ease;
+  background: transparent;
+
+}
+
+nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.9);
+  /* oscuro, con opacidad */
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff !important;
+  /* color del link por defecto */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: #00bcd4 !important;
+  /* color al pasar el mouse o enfocar */
+}
+
+.dropdown-menu.bg-dark .dropdown-item {
+  color: #ffffff !important;
+  /* blanco o claro */
+}
+
+.dropdown-menu.bg-dark .dropdown-item:hover,
+.dropdown-menu.bg-dark .dropdown-item:focus {
+  background-color: #00bcd4 !important;
+  /* color de fondo al hacer hover */
+  color: #000 !important;
+  /* color del texto al hacer hover */
+}
+
 
 .titulo {
   display: flex;
@@ -8,15 +48,19 @@
   align-items: center;
   /* border: dashed darksalmon 3px; */
   justify-content: space-around;
-
 }
+
+
 
 .titulo h1,
 .titulo h5 {
   margin: 0 !important;
   padding: 0 !important;
   line-height: 1 !important;
-  color: rgb(193, 194, 221);
+  color: rgb(225, 225, 225);
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .titulo img {
@@ -36,7 +80,7 @@
 /* MD - >=768px */
 @media (min-width: 768px) {
   .titulo img {
-    height: 5vw;
+    height: 3vw;
     filter: brightness(0) saturate(100%) invert(100%) sepia(7%) saturate(1369%) hue-rotate(208deg) brightness(97%) contrast(85%);
 
   }

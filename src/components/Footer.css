@@ -19,7 +19,14 @@ footer img {
   filter: invert(1); /* invierte los colores */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   footer {
+    justify-content: center;
   }
+  footer img {
+  height: 8vw;
+  filter: invert(1); /* invierte los colores */
 }
+}
+
+

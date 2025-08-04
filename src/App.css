@@ -2,20 +2,14 @@
 
 body {
   font-family: 'Raleway', sans-serif !important;
-  background-image: url('/underConst.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: #090912;
+  background: linear-gradient(90deg, rgba(9, 9, 18, 1) 0%, rgba(45, 52, 54, 1) 100%);
+  /* background-image: url('/5053309.jpg'); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  /* background-repeat: no-repeat; */
   min-height: 100vh;
   margin: 0;
 }
 
 /* Estilos específicos para pantallas pequeñas */
-@media (max-width: 768px) {
-  body {
-    background-size: contain;         /* La imagen se ajusta sin recortarse */
-    background-position: center;  /* Se alinea al centro superior */
-    background-repeat: no-repeat;
-    background-color: rgb(31, 31, 31) !important;           /* Opcional: color de fondo de relleno */
-  }
-}

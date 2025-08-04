@@ -1,17 +1,15 @@
 import './Header.css'
+import logo from '../assets/logo3.png'
 
 const Header = () => {
-  
+
   return (
     <header id="home">
+
       <nav className="navbar navbar-expand-md navbar-dark fixed-top no-space" id="banner">
         <div className="container-fluid no-space">
           <div className="titulo no-space">
-            <h1 className="no-space">Tu Asegurador</h1>
-            {/* <img src={lauburu} alt="" />   */}
-            <div className="no-space">
-              {/* <h5 className="no-space">Productor de Seguros</h5> */}
-            </div>
+            <img src={logo} alt="logo" className='' />  
           </div>
 
           <button

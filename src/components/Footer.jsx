@@ -8,7 +8,7 @@ export default function Footer() {
         <h1>JAVIER ZUBILLAGA</h1>
         <h5>Productor Asesor de Seguros</h5>
       </div>
-      <img src={lauburu} alt="lauburu" /> 
+      {/* <img src={lauburu} alt="lauburu" />   */}
     </footer>
   );
 }

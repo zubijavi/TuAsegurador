@@ -2,9 +2,11 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* ocupa toda la altura visible */
+  height: 80vh; 
+  margin-top: 6vw;
   padding: 1rem;
   box-sizing: border-box;
+  color: wheat;
 
 }
 

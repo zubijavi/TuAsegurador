@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-
 
 .borde {
   border: dashed darksalmon 3px;
 }
 
+
 nav {
-  margin: 0 6vw !important;
+  margin: 0vw 4vw !important;
   transition: background-color 0.3s ease;
   background: transparent;
 
 }
 
 nav.scrolled {
+  
   background-color: rgba(0, 0, 0, 0.9);
   /* oscuro, con opacidad */
 }
@@ -44,44 +44,39 @@ nav.scrolled {
 
 .titulo {
   display: flex;
-  width: 32vw;
+  /* width: 32vw; */
   align-items: center;
-  /* border: dashed darksalmon 3px; */
   justify-content: space-around;
 }
 
 
 
-.titulo h1,
 .titulo h5 {
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 1.5vw;
   line-height: 1 !important;
   color: rgb(225, 225, 225);
-  font-family: "Pacifico", cursive;
-  font-weight: 400;
-  font-style: normal;
+  /* font-size: 4vw; */
+  
 }
 
 .titulo img {
-  height: 12vw;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(7%) saturate(1369%) hue-rotate(208deg) brightness(97%) contrast(85%);
+  height: 20vw;
+  filter: brightness(1.5) contrast(1);
 
 }
 
 /* SM - >=576px */
 @media (min-width: 576px) {
-  .titulo img {
-    height: 8vw;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(7%) saturate(1369%) hue-rotate(208deg) brightness(97%) contrast(85%);
-  }
+
+  .titulo h1 {
+  font-size: 4vw;
+}
 }
 
 /* MD - >=768px */
 @media (min-width: 768px) {
-  .titulo img {
-    height: 3vw;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(7%) saturate(1369%) hue-rotate(208deg) brightness(97%) contrast(85%);
-
-  }
+  .titulo h1 {
+  font-size: 3vw;
+}
 }

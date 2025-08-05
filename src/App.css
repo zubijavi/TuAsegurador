@@ -11,5 +11,10 @@ body {
   min-height: 100vh;
   margin: 0;
 }
+.app-container{
+  margin-top: 0;
+  padding: 0;
+}
+
 
 /* Estilos específicos para pantallas pequeñas */

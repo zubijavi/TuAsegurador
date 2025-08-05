@@ -1,0 +1,129 @@
+.caja{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    /* border: green 2px dashed; */
+    width: 40vw;
+    /* gap: 1rem; */
+    /* height: 15vw; */
+}
+.cajaArriba{
+    font-size: 3vw;
+    /* border: green 2px dashed; */
+    width: 90%;
+    text-align: center;
+}
+.cajaAbajo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    font-size: 1vw;
+    width: 85%;
+}
+.cajaAbajo img {
+    filter: invert(19%) sepia(94%) saturate(1294%) hue-rotate(89deg) brightness(60%) contrast(88%);
+    height: 2vw;
+}
+
+.cajaDerechaAbajoIzquierda{
+    /* border-right: solid 2px rgb(0, 0, 0); */
+    width: 50%;
+    text-align: center;
+}
+.cajaDerechaAbajoDerecha{
+    width: 50%;
+    text-align: center;
+}
+
+
+
+nav {
+  margin: 0vw 4vw !important;
+  transition: background-color 0.3s ease;
+  background: transparent;
+}
+
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff; /* color del link por defecto */
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+  color: #00bcd4 !important; /* color al pasar el mouse o enfocar */
+}
+
+.dropdown-menu.bg-dark .dropdown-item {
+  color: #ffffff !important; /* blanco o claro */
+}
+
+.dropdown-menu.bg-dark .dropdown-item:hover,
+.dropdown-menu.bg-dark .dropdown-item:focus {
+  background-color: #00bcd4 !important; /* color de fondo al hacer hover */
+  color: #000 !important; /* color del texto al hacer hover */
+}
+
+nav {
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+
+nav.scrolled {
+  background-color: rgba(255, 255, 255, 0.9); /* Cambiá esto a lo que quieras */
+  width: 100%;
+  margin: 0 !important;
+}
+nav.scrolled  .caja {
+    width: auto;
+    /* align-items: flex-start; */
+    flex-direction: row;
+    gap: 1.5vw;
+    align-items: center;
+  }
+
+nav.scrolled  .cajaArriba {
+    font-size: 1.5vw;
+    color: rgb(36, 36, 36);
+  }
+
+nav.scrolled  .cajaAbajo div {
+    display: none;
+  }
+
+nav.scrolled  .cajaAbajo img {
+    height: 2vw;
+  }
+  nav.scrolled .nav-link {
+  color: #0f0f0f !important; /* Cambiá este color al que quieras */
+}
+
+@media (max-width: 768px) {
+
+  .caja {
+    width: auto;
+    /* align-items: flex-start; */
+    flex-direction: row;
+    gap: 1.5vw;
+    align-items: center;
+  }
+
+  .cajaArriba {
+    font-size: 4vw;
+  }
+
+  .cajaAbajo div {
+    display: none;
+  }
+
+  .cajaAbajo img {
+    height: 3vw;
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+    padding-left: 80vw;
+  }
+}

@@ -1,11 +1,12 @@
 import './Home.css';
 import agricolaVideo from '../pages/maiz.mp4';
+import cebada from '../pages/cebada.mp4'
 
 export default function Home() {
   return (
     <main className="homeContainer">
       <video autoPlay loop muted className="videoFondo">
-        <source src={agricolaVideo} type="video/mp4" />
+        <source src={cebada} type="video/mp4" />
         Tu navegador no soporta videos HTML5.
       </video>
 

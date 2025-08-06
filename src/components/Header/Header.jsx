@@ -16,7 +16,7 @@ const Header = () => {
   }, [])
 
   return (
-    <header id="home">.
+    <header id="home">
       <nav className={`navbar navbar-expand-md navbar-dark fixed-top no-space ${isScrolled ? 'scrolled' : ''}`} id="banner">
 
   <div className="container-fluid no-space d-flex justify-content-between align-items-center">

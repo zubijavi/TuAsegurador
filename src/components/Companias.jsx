@@ -1,7 +1,11 @@
 import sancorLogo from '../assets/companias/sancor.svg'
 import prevencionLogo from '../assets/companias/prevencion.svg'
 import bdsLogo from '../assets/companias/bds.png'
-import integrity from '../assets/companias/integrity.png'
+import integrityLogo from '../assets/companias/integrity.png'
+import sancristobalLogo from '../assets/companias/sancristobal.png'
+import cooperacionLogo from '../assets/companias/cooperacion.png'
+
+
 
 
 import './Companias.css'
@@ -11,7 +15,11 @@ const companias = [
     { nombre: 'Sancor Seguros', logo: sancorLogo },
     { nombre: 'Prevencion ART', logo: prevencionLogo },
     { nombre: 'Banco del Sol', logo: bdsLogo },
-    { nombre: 'Ingegrity Seguros', logo: integrity },
+    { nombre: 'Ingegrity Seguros', logo: integrityLogo },
+    { nombre: 'San Cristobal Seguros', logo: sancristobalLogo },
+    { nombre: 'Cooperacion Seguros', logo: cooperacionLogo },
+
+
 
     // Agregá más compañías acánc
 ];

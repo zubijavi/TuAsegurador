@@ -1,15 +1,16 @@
 .logosCias {
-  width: 20vw;
+  width: 12vw;
   filter: brightness(0) invert(1); /* blanco */
 }
 .logosCias:hover {
-  width: 20vw;
+  width: 12.1vw;
   filter: invert(0); /* blanco */
 }
 
 
 .cias{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }

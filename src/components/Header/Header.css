@@ -11,7 +11,7 @@
 }
 
 .cajaArriba {
-  font-size: 3vw;
+  font-size: 2vw;
   /* border: green 2px dashed; */
   width: 90%;
   text-align: center;
@@ -21,14 +21,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1vw;
+  gap: 0.52vw;
   font-size: 1vw;
   width: 85%;
 }
 
 .cajaAbajo img {
   filter: invert(19%) sepia(94%) saturate(1294%) hue-rotate(89deg) brightness(60%) contrast(88%);
-  height: 2vw;
+  height: 1.2vw;
 }
 
 .cajaDerechaAbajoIzquierda {

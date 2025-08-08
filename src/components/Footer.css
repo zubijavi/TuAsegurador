@@ -1,23 +1,23 @@
 footer {
     color: rgb(0, 0, 0);
     display: flex;
-    padding: 5vw 3vw;
-    justify-content: center;
-    align-items: center;
+    padding: 0.51vw 1.5vw;
+    /* height: 3vw; */
+    justify-content: right;
+    /* align-items: flex-end; */
+    position: absolute;
+    width: 100%;
+  bottom: 0;
     gap: 1vw;
-    color: rgb(225, 225, 225);
+    background-color: rgb(152, 147, 142);
 }
 footer h1{
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 footer h5 {
-      font-size: .8rem;
+      font-size: .6rem;
 }
 
-footer img {
-  height: 3.5vw;
-  filter: invert(1); /* invierte los colores */
-}
 
 @media (max-width: 576px) {
   footer {

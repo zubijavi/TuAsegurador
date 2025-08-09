@@ -1,5 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
+import Historia from './components/Historia';
+
 import Companias from './components/Companias';
 
 import Footer from './components/Footer';
@@ -17,6 +19,7 @@ function App() {
           {/* Podés agregar más rutas acá */}
         </Routes>
       </Router>
+      <Historia/>
       <Companias/>
       <Footer/>
     </div>

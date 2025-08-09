@@ -3,11 +3,11 @@ footer {
     display: flex;
     padding: 0.51vw 1.5vw;
     /* height: 3vw; */
-    justify-content: right;
+    justify-content: center;
     /* align-items: flex-end; */
     position: absolute;
     width: 100%;
-  bottom: 0;
+  /* bottom: 0; */
     gap: 1vw;
     background-color: rgb(152, 147, 142);
 }

@@ -5,8 +5,7 @@ export default function Footer() {
   return (
     <footer id="contacto">
       <div>
-        <h1>JAVIER ZUBILLAGA</h1>
-        <h5>Productor Asesor de Seguros</h5>
+        <h1>Gracias por su visita</h1>
       </div>
       {/* <img src={lauburu} alt="lauburu" />   */}
     </footer>

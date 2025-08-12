@@ -14,11 +14,7 @@ const Historia = () => {
           {/* Texto */}
           <div>
             <p className="">
-              Soy Javier Zubillaga, Productor Asesor de Seguros
-              (Matrícula 81915) con más de una década de experiencia brindando
-              soluciones aseguradoras personalizadas. Mi misión es ayudarte a
-              proteger lo que más valorás, con atención cercana, clara y
-              honesta.
+             Desde 2013, ayudamos a personas y empresas a proteger lo que más valoran. Nuestra experiencia nos permite ofrecer coberturas diseñadas a medida, adaptadas a cada necesidad y presupuesto. Brindamos un asesoramiento cercano, claro y de confianza, acompañándote en cada etapa para que siempre tengas la tranquilidad de estar protegido.
             </p>
             <p className="">
               En <strong>Tu Asegurador</strong> creemos en la importancia de

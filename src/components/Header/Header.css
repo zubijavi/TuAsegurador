@@ -74,7 +74,10 @@ nav {
   color: #000 !important;
   /* color del texto al hacer hover */
 }
-
+.navbar-collapse.show {
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro */
+  text-align: center;
+}
 nav {
   transition: background-color 0.3s ease;
   background-color: transparent;

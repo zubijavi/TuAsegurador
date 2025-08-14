@@ -5,20 +5,32 @@ export default function Footer() {
   return (
     <footer id="contacto">
       <div className='footerIzq'>
-        <div>
-          <p>Javier Zubillaga</p>
-          <p>Productor Asesor de Seguro (Mat 81915)</p>
-          <p>
-            <a href="mailto:info@seguros.com">javierzubillaga@outlook.com.ar</a>
-          </p>
-          <p>
-            <a href="https://wa.me/5493411234567" target="_blank">Necochea</a> - <a href="https://wa.me/5493417654321" target="_blank">Rosario</a>
-          </p>
+        <div className='nombre'>
+          <h1>JAVIER ZUBILLAGA</h1>
+          <h6>Productor de Seguros Mat 81915</h6>
         </div>
-
-      </div >
-      <div className='footerMedio'>
-       <img src={ssn} alt="" />
+        {/* <div className='mail'>
+          <a href="mailto:info@seguros.com"><i class="fa-solid fa-envelope"></i> javierzubillaga@outlook.com.ar</a>
+          </div> */}
+        <div className='whatsApp'>
+          <div>
+            <span><i class="fa-solid fa-location-dot"></i> Mitre 208, Rosario (Santa Fe) <a href="https://wa.me/5493417654321" target="_blank"><i class="fa-brands fa-whatsapp"></i>  +54 341 5321123</a></span>
+          </div>
+          <div>
+            <span><i class="fa-solid fa-location-dot"></i> 81 nº 981, Necochea (Bs As)  <a href="https://wa.me/5493411234567" target="_blank"><i class="fa-brands fa-whatsapp"></i> +54 2262 532123</a></span>
+          </div>
+        </div>
+      </div>
+          <div className='footerMedio'>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+      <div className='footerDer'>
+        <img src={ssn} alt="" />
+        <p>0800-666-8400</p>
       </div>
     </footer >
   );

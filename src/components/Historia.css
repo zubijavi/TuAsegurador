@@ -10,3 +10,50 @@
     font-size: 1.3vw;
     font-variation-settings: "wdth" 100;
 }
+
+.info-icons {
+    margin-top: 2rem;
+    gap: 1.5rem;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.info-card {
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(189, 185, 185, 0.1);
+    transition: transform 0.2s ease-in-out;
+    font-size: 1vw;
+    margin: 2vw;
+}
+
+.info-card:hover {
+    transform: translateY(-4px);
+}
+
+.info-icon {
+    font-size: 3vw;
+    margin-bottom: 1rem;
+}
+
+
+@media (max-width: 576px) {
+    .historia {
+        font-size: 2vw;
+    }
+
+    .info-icon {
+        font-size: 6vw;
+        margin-bottom: 1rem;
+    }
+
+    .info-card {
+        font-size: 2vw;
+        margin: 2vw;
+    }
+      .info-card h3{
+        font-size: 4vw;
+    }
+}

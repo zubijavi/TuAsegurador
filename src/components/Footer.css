@@ -21,17 +21,21 @@ footer {
 .footerIzq .nombre {
   /* text-align: center; */
 }
-.footerIzq .nombre h1{
+
+.footerIzq .nombre h1 {
   font-size: 1.8vw;
 }
-.footerIzq .nombre h6{
+
+.footerIzq .nombre h6 {
   font-size: 1vw;
+  font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .footerIzq .mail {
   /* border: green 2px dashed; */
-  text-align: center;
-  font-size: 1vw;
+  /* text-align: center; */
+  font-size: 1.2vw;
 }
 
 .footerIzq a {
@@ -44,22 +48,22 @@ footer {
   justify-content: space-between;
   flex-direction: column;
   gap: .5vw;
-  font-size: .9vw;
-  /* border: rebeccapurple 2px dashed */
+  font-size: 1.1vw;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.footerIzq .whatsApp div {
-  display: flex;
-  flex-direction: column;
-  /* align-items: end; */
+.footerIzq .direcciones {
+  /* border: red 2px solid; */
+  font-size: .85vw;
   font-family: Arial, Helvetica, sans-serif;
-  /* justify-content: space-around; */
+  display: flex;
+  gap: .5vw;
 }
 
 
 .footerMedio {
   /* border: red 2px dashed; */
-  width: 15%;
+  width: 30%;
   display: flex;
   /* flex-direction: column; */
   justify-content: space-around;
@@ -69,6 +73,7 @@ footer {
 .footerMedio i {
   font-size: 2.5vw;
 }
+
 .footerDer {
   display: flex;
   flex-direction: column;
@@ -94,9 +99,9 @@ footer {
     flex-direction: column;
     display: grid;
     grid-template-columns: 1fr 1fr;
-      grid-template-areas: 
-    "izquierdaArriba derecha"
-    "izquierdaAbajo derecha";
+    grid-template-areas:
+      "izquierdaArriba izquierdaAbajo"
+      "derecha derecha";
     /* gap: 2vw; */
   }
 
@@ -107,50 +112,57 @@ footer {
     /* border: dashed 2px darkblue; */
   }
 
-.footerIzq .nombre h1{
-  font-size: 3.4vw;
-  text-align: center;
-}
-.footerIzq .nombre h6{
-  display: none
-}
+  .footerIzq .nombre h1 {
+    font-size: 3.4vw;
+    /* text-align: center; */
+  }
+
+  .footerIzq .nombre h6 {
+    display: none
+  }
 
   .footerIzq .mail {
-    display: none;
+    /* display: none; */
+    font-size: 2vw;
   }
 
   .footerIzq .whatsApp {
-    display: flex;
-    justify-content: space-evenly;
-    /* flex-direction: column; */
-    gap: .5vw;
+    font-size: 2vw;
   }
 
-  .footerIzq .whatsApp div {
-    display: none;
-  }
-  .footerMedio{
+
+
+  .footerMedio {
     grid-area: izquierdaAbajo;
     /* border: red 2px solid; */
     width: 100%;
     justify-content: center;
     gap: 2vw;
   }
+
   .footerMedio i {
     font-size: 3.5vw;
   }
-  .footerDer{
+
+  .footerDer {
     grid-area: derecha;
+    display: flex;
+    align-items: center;
   }
+
   .footerDer img {
     width: 35vw;
     filter: brightness(0.3) invert(0);
   }
 
   .footerDer p {
-    text-align: center;
-    font-size: 3vw;
-    color: rgb(83, 82, 82);
-    font-family: Arial, Helvetica, sans-serif;
+    display: none;
+  }
+
+  .footerIzq .direcciones {
+    font-size: 1.1vw;
+    display: flex;
+    gap: .5vw;
+    flex-direction: column;
   }
 }

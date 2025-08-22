@@ -19,63 +19,68 @@ const Header = () => {
     <header id="home">
       <nav className={`navbar navbar-expand-md navbar-dark fixed-top no-space ${isScrolled ? 'scrolled' : ''}`} id="banner">
 
-  <div className="container-fluid no-space d-flex justify-content-between align-items-center">
-    
-    <div className="caja">
-      <div className="cajaArriba">TuAsegurador.com.ar</div>
-      <div className="cajaAbajo">
-        <div>Javier Zubillaga</div>
-        <img src={lauburu} alt="Lauburu" />
-        <div>Productor de Seguros</div>
-      </div>
-    </div>
+        <div className="container-fluid no-space d-flex justify-content-between align-items-center">
 
-    <button
-      className="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#collapsibleNavbar"
-      aria-controls="collapsibleNavbar"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span className="navbar-toggler-icon"></span>
-    </button>
-
-    <div className="collapse navbar-collapse no-space" id="collapsibleNavbar">
-      <ul className="navbar-nav ms-auto no-space">
-                <li className="nav-item">
-                  <a className="nav-link" href="#home">Home</a>
-                </li>
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="#"
-                    id="navbardrop"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Cotiza YA!
-                  </a>
-                  <ul className="dropdown-menu bg-dark">
-                    <li><a className="dropdown-item" href="#">Auto</a></li>
-                    <li><a className="dropdown-item" href="#">Moto</a></li>
-                    <li><a className="dropdown-item" href="#">Hogar</a></li>
-                    <li><a className="dropdown-item" href="#">Comercio</a></li>
-                  </ul>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#info">Info</a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#contacto">Contacto</a>
-                </li>
-              </ul>
+          <div className="caja">
+            <div className="cajaArriba">TuAsegurador.com.ar</div>
+            <div className="cajaAbajo">
+              <div>Javier Zubillaga</div>
+              <img src={lauburu} alt="Lauburu" />
+              <div>Productor de Seguros</div>
             </div>
           </div>
-        </nav>
-      </header>
+
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+            aria-controls="collapsibleNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div className="collapse navbar-collapse no-space" id="collapsibleNavbar">
+            <ul className="navbar-nav ms-auto no-space">
+              <li className="nav-item">
+                <a className="nav-link" href="#home">Home</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="https://wa.me/5493413354935?text=Hola%21%20necesito%20cotizaci%C3%B3n"
+                  target="_blank"
+                  rel="noopener noreferrer">Cotiza Ya!</a>
+              </li>
+              {/* <li className="nav-item dropdown">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbardrop"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Cotiza YA!
+                </a>
+                <ul className="dropdown-menu bg-dark">
+                  <li><a className="dropdown-item" href="#">Auto</a></li>
+                  <li><a className="dropdown-item" href="#">Moto</a></li>
+                  <li><a className="dropdown-item" href="#">Hogar</a></li>
+                  <li><a className="dropdown-item" href="#">Comercio</a></li>
+                </ul>
+              </li> */}
+              <li className="nav-item">
+                <a className="nav-link" href="#info">Info</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#contacto">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
   )
 }
 

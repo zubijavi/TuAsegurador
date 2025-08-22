@@ -11,8 +11,19 @@ export default function Home() {
       </video>
 
       <div className="contenido">
-        {/* <h2>Página En Construcción</h2> */}
-        {/* Otros componentes o contenido */}
+        <div className='fondoOscuro'>
+          <h1 className="text-capitalize"> Protección Inteligente para Personas y Empresas</h1>
+          <p>Brindamos seguros a medida para individuos, medianas y grandes empresas, con el respaldo de compañías líderes
+            del mercado.</p>
+        <a
+          href="https://wa.me/5493413354935?text=Hola%21%20necesito%20cotizaci%C3%B3n"
+          className="banner-btn"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Cotizar
+        </a>
+        </div>
       </div>
     </main>
   );

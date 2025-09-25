@@ -4,7 +4,7 @@ import Historia from './components/Historia';
 
 import Companias from './components/Companias';
 
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import Home from './pages/Home';
 import './App.css'
 import fondo from '../src/assets/underConst.jpg';
@@ -21,7 +21,7 @@ function App() {
       </Router>
       <Historia/>
       <Companias/>
-      <Footer/>
+      {/* <Footer/> */}
     </div>
   );
 }

@@ -1,171 +1,193 @@
-.caja {
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Raleway:wght@400;600&display=swap');
+
+/* --- Header principal --- */
+header {
+  background-color: #671D49;
+  color: rgb(223, 223, 223);
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 2vw;
+  height: 4vw;
+  font-family: 'Raleway', sans-serif;
+  z-index: 1000;
+  
+}
+
+/* --- Logo --- */
+.logo {
+  font-family: 'Bad Script', cursive;
+  /* width: 20vw; */
+  display: flex;
+  padding-top: 1vw;
   flex-direction: column;
-  /* justify-content: left; */
-  align-items: flex-start;
-  color: aliceblue;
-  /* border: green 2px dashed; */
-  width: 40vw;
-  /* gap: 1rem; */
-  /* height: 15vw; */
-}
-
-.cajaArriba {
-  font-size: 2vw;
-  /* border: green 2px dashed; */
-  /* width: 90%; */
-  text-align: center;
-}
-
-.cajaAbajo {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 0.52vw;
+  color: rgb(241, 228, 203);
+  /* border: 2px dashed wheat; */
+}
+
+.logo h1 {
+  /* transform: rotate(-10deg) translate(0vw, 0vw); */
+  font-size: 2vw;
+  margin: 0;
+}
+
+.logo h4 {
   font-size: 1vw;
-  /* width: 85%; */
+  margin: 0;
+  text-align: right;
+  /* border: white 2px dashed; */
+  /* display: flex; */
+  /* align-items: end; */
+  transform: translate(-.2vw,-1.5vw);
+  /* transform: rotate(-10deg) translate(7.5vw, -.4vw); */
 }
 
-.cajaAbajo img {
-  filter: invert(19%) sepia(94%) saturate(1294%) hue-rotate(89deg) brightness(60%) contrast(88%);
-  height: 1.2vw;
-}
-
-.cajaDerechaAbajoIzquierda {
-  /* border-right: solid 2px rgb(0, 0, 0); */
-  width: 50%;
-  text-align: center;
-}
-
-.cajaDerechaAbajoDerecha {
-  width: 50%;
-  text-align: center;
-}
-
-
-
+/* --- Navegación principal --- */
 nav {
-  margin: 0vw 4vw !important;
-  transition: background-color 0.3s ease;
-  background: transparent;
-}
-
-
-.navbar-dark .navbar-nav .nav-link {
-  color: #ffffff;
-  /* color del link por defecto */
-}
-
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link:focus {
-  color: #00bcd4 !important;
-  /* color al pasar el mouse o enfocar */
-}
-
-.dropdown-menu.bg-dark .dropdown-item {
-  color: #ffffff !important;
-  /* blanco o claro */
-}
-
-.dropdown-menu.bg-dark .dropdown-item:hover,
-.dropdown-menu.bg-dark .dropdown-item:focus {
-  background-color: #00bcd4 !important;
-  /* color de fondo al hacer hover */
-  color: #000 !important;
-  /* color del texto al hacer hover */
-}
-.navbar-collapse.show {
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro */
-  text-align: center;
-}
-nav {
-  transition: background-color 0.3s ease;
-  background-color: transparent;
-}
-
-nav.scrolled {
-  background-color: rgba(255, 255, 255, 0.9);
-  /* Cambiá esto a lo que quieras */
-  width: 100%;
-  margin: 0 !important;
-}
-
-nav.scrolled .caja {
-  width: auto;
-  /* align-items: flex-start; */
-  flex-direction: row;
-  gap: 1.5vw;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
+  /* width: 45vw; */
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.22vw;
+  transition: all 0.3s ease;
+  /* margin-right: 2vw; */
 }
 
-nav.scrolled .cajaArriba {
-  font-size: 1.5vw;
-  color: rgb(36, 36, 36);
+nav p {
+  margin: 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-nav.scrolled .cajaAbajo div {
+nav p a {
+  text-decoration: none;
+  color: rgb(223, 223, 223);
+}
+
+/* --- Submenús (desktop) --- */
+.submenu {
+  position: relative;
+}
+
+.submenu-label {
+  cursor: pointer;
+  padding: 0.5rem;
+  user-select: none;
+}
+
+.submenu-content {
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #8c3d67;
+  border-radius: 6px;
+  padding: 0.5rem 0;
+  flex-direction: column;
+  min-width: 8rem;
+  z-index: 2000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
 }
 
-nav.scrolled .cajaAbajo img {
-  height: 2vw;
+.submenu-content p {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
 }
 
-nav.scrolled .nav-link {
-  color: #0f0f0f !important;
-  /* Cambiá este color al que quieras */
+.submenu-content p:hover {
+  background-color: rgba(255,255,255,0.1);
 }
 
-@media (max-width: 768px) {
+/* --- Muestra submenu cuando tiene clase .open --- */
+.submenu.open .submenu-content {
+  display: flex;
+}
 
-  .caja {
-    width: auto;
-    /* align-items: flex-start; */
-    flex-direction: row;
-    gap: 1.5vw;
+/* --- Icono menú hamburguesa --- */
+.menu-toggle {
+  display: none;
+  margin-right: 10vw;
+  font-size: 2.5rem;
+  cursor: pointer;
+  z-index: 1101;
+  color: rgb(223, 223, 223);
+}
+
+/* --- Responsive Header --- */
+@media (max-width: 750px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7vw;
+    padding: 1rem 2rem;
+    z-index: 2000;
+  }
+  .logo h1 {
+  /* transform: rotate(-10deg) translate(0vw, 0vw); */
+  font-size: 5vw;
+  margin: 0;
+}
+
+.logo h4 {
+  display: none;
+  /* transform: rotate(-10deg) translate(7.5vw, -.4vw); */
+}
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: fixed;
+    top: 11vw; /* altura del header */
+    left: 0;
+    width: 100%;
+    background-color: #671D49;
+    flex-direction: column;
     align-items: center;
-  }
-
-  .cajaArriba {
-    font-size: 4vw;
-  }
-
-  .cajaAbajo div {
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
     display: none;
   }
 
-  .cajaAbajo img {
-    height: 3vw;
+  nav.active {
+    display: flex;
   }
 
-  .navbar-toggler {
-    margin-left: auto;
-    padding-left: 80vw;
+  nav p {
+    font-size: 1.4rem;
   }
 
-  nav.scrolled {
-    transition: background-color 0.3s ease;
-    background-color: transparent;
+  /* --- Submenús en mobile --- */
+  .submenu {
+    width: 100%;
+    text-align: center;
   }
 
-  nav.scrolled .caja {
-    width: auto;
-    /* align-items: flex-start; */
-    flex-direction: row;
-    gap: 1.5vw;
-    align-items: center;
+  .submenu-content {
+    position: static;
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 0;
+    box-shadow: none;
   }
 
-  nav.scrolled .cajaArriba {
-    font-size: 4vw;
-    color: aliceblue;
+  .submenu.open .submenu-content {
+    display: flex;
+  }
 
+  .submenu-content p {
+    font-size: 1.2rem;
+    padding: 0.7rem 0;
   }
-  nav.scrolled .cajaAbajo img {
-    height: 4vw;
-  }
-  nav.scrolled .nav-link {
-  color: #c4bdbd !important;
-  /* Cambiá este color al que quieras */
-}
 }

@@ -1,87 +1,95 @@
-import './Header.css'
-import lauburu from '../../assets/laubu.png'
-import { useEffect, useState } from 'react'
+import React, { useEffect } from "react";
+import "./Header.css";
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY
-      setIsScrolled(scrollTop > 50) // o cualquier cantidad de px que quieras
-    }
+    const menuToggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector("nav");
+    const submenus = document.querySelectorAll(".submenu");
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    // --- Abrir/cerrar menú hamburguesa ---
+    const toggleMenu = (e) => {
+      e.stopPropagation();
+      nav.classList.toggle("active");
+      menuToggle.classList.toggle("fa-bars");
+      menuToggle.classList.toggle("fa-xmark");
+    };
+    menuToggle?.addEventListener("click", toggleMenu);
+
+    // --- Abrir/cerrar submenús (click en label) ---
+    const handleSubmenuClick = (e, menu) => {
+      e.stopPropagation();
+      submenus.forEach((m) => m !== menu && m.classList.remove("open"));
+      menu.classList.toggle("open");
+    };
+
+    submenus.forEach((menu) => {
+      const label = menu.querySelector(".submenu-label");
+      label?.addEventListener("click", (e) => handleSubmenuClick(e, menu));
+    });
+
+    // --- Cerrar menú y submenús al hacer clic fuera ---
+    const closeAll = (e) => {
+      if (nav.contains(e.target) || menuToggle.contains(e.target)) return;
+      nav.classList.remove("active");
+      submenus.forEach((m) => m.classList.remove("open"));
+      menuToggle.classList.remove("fa-xmark");
+      menuToggle.classList.add("fa-bars");
+    };
+
+    document.addEventListener("click", closeAll);
+
+    // --- Limpieza ---
+    return () => {
+      menuToggle?.removeEventListener("click", toggleMenu);
+      document.removeEventListener("click", closeAll);
+      submenus.forEach((menu) => {
+        const label = menu.querySelector(".submenu-label");
+        label?.removeEventListener("click", (e) => handleSubmenuClick(e, menu));
+      });
+    };
+  }, []);
 
   return (
-    <header id="home">
-      <nav className={`navbar navbar-expand-md navbar-dark fixed-top no-space ${isScrolled ? 'scrolled' : ''}`} id="banner">
+    <header>
+      <div className="logo">
+        <h1>TuAsegurador</h1>
+        <h4>.com.ar</h4>
+      </div>
 
-        <div className="container-fluid no-space d-flex justify-content-between align-items-center">
+      {/* Icono de menú hamburguesa */}
+      <i className="fas fa-bars menu-toggle"></i>
 
-          <div className="caja">
-            <div className="cajaArriba">TuAsegurador.com.ar</div>
-            <div className="cajaAbajo">
-              <div>Javier Zubillaga</div>
-              <img src={lauburu} alt="Lauburu" />
-              <div>Productor de Seguros</div>
-            </div>
-          </div>
+      <nav>
+        <p>Inicio</p>
 
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapsibleNavbar"
-            aria-controls="collapsibleNavbar"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
-          <div className="collapse navbar-collapse no-space" id="collapsibleNavbar">
-            <ul className="navbar-nav ms-auto no-space">
-              <li className="nav-item">
-                <a className="nav-link" href="#home">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="https://wa.me/5493413354935?text=Hola%21%20necesito%20cotizaci%C3%B3n"
-                  target="_blank"
-                  rel="noopener noreferrer">Cotiza Ya!</a>
-              </li>
-              {/* <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbardrop"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Cotiza YA!
-                </a>
-                <ul className="dropdown-menu bg-dark">
-                  <li><a className="dropdown-item" href="#">Auto</a></li>
-                  <li><a className="dropdown-item" href="#">Moto</a></li>
-                  <li><a className="dropdown-item" href="#">Hogar</a></li>
-                  <li><a className="dropdown-item" href="#">Comercio</a></li>
-                </ul>
-              </li> */}
-              <li className="nav-item">
-                <a className="nav-link" href="#info">Info</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#contacto">Contacto</a>
-              </li>
-            </ul>
+        <div className="submenu">
+          <p className="submenu-label">Seguros ▾</p>
+          <div className="submenu-content">
+            <p>Autos</p>
+            <p>Hogar</p>
+            <p>Vida</p>
+            <p>Comercio</p>
           </div>
         </div>
+
+        <p>Siniestros</p>
+
+        <div className="submenu">
+          <p className="submenu-label">Ayuda ▾</p>
+          <div className="submenu-content">
+            <p>Quiénes Somos</p>
+            <p>Preguntas Frecuentes</p>
+          </div>
+        </div>
+
+        <p>Blog</p>
+        <p>
+          <a href="./yo.html">Contacto</a>
+        </p>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

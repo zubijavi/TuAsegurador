@@ -4,6 +4,8 @@ import Historia from './components/Historia';
 
 import Companias from './components/Companias';
 
+import WhatsAppButton from './components/WhatsAppButton';
+
 // import Footer from './components/Footer';
 import Home from './pages/Home';
 import './App.css'
@@ -13,14 +15,14 @@ function App() {
   return (
     <div className='app-container'>
       <Header/>
-      <Router>
+      {/* <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* Podés agregar más rutas acá */}
         </Routes>
-      </Router>
-      <Historia/>
-      <Companias/>
+      </Router> */}
+      {/* <Historia/>
+      <Companias/> */}
+      <WhatsAppButton/>
       {/* <Footer/> */}
     </div>
   );

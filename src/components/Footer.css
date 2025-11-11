@@ -19,10 +19,6 @@ footer {
   /* border: red dashed 2px; */
 }
 
-.footerIzq .nombre {
-  /* text-align: center; */
-}
-
 .footerIzq .nombre h1 {
   font-size: 1.8vw;
 }
@@ -98,6 +94,7 @@ footer {
 @media (max-width: 750px) {
   footer {
     padding: 1.5vw;
+    margin-bottom: 2.5vw;
     flex-direction: column;
     display: grid;
     grid-template-columns: 1fr 1fr;

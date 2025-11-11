@@ -3,7 +3,7 @@ main {
     background: #eee4e4;
     margin-top: 0.3vw;
     display: flex;
-    padding: 1vw;
+    padding: 1vw 1vw;
     gap: 2vw;
     align-items: center;
     justify-content: space-between;
@@ -78,7 +78,7 @@ button:hover {
 
 .why-us {
     background: linear-gradient(180deg, rgba(103, 29, 73, 0.04), transparent 40%);
-    padding: 48px 16px;
+    padding: 0 1vw;
     font-family: Inter, system-ui, -apple-system, "Helvetica Neue", Arial;
     color: #111;
 }
@@ -166,40 +166,11 @@ button:hover {
     font-size: 0.9rem;
 }
 
-/* --- Responsive --- */
-@media (max-width: 900px) {
-    .features {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .features {
-        grid-template-columns: 1fr;
-    }
-
-    .why-us {
-        padding: 32px 12px;
-    }
-
-    .feature {
-        flex-direction: row;
-        align-items: center;
-        gap: 14px;
-    }
-
-    .feature p {
-        font-size: 0.9rem;
-    }
-
-    .feature h3 {
-        font-size: 1rem;
-    }
-}
 
 /* --- Responsive para main --- */
 @media (max-width: 750px) {
     main {
+        margin-top: 13vw;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
@@ -210,7 +181,7 @@ button:hover {
 
     .form-container {
         grid-area: cotizador;
-        margin-top: 10vw;
+        margin-top: 2vw;
     }
 
     .why-us {

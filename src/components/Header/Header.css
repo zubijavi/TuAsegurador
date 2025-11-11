@@ -8,8 +8,8 @@ header {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding: 0.5rem 2vw;
-  height: 4vw;
+  padding: 0.3vw 2vw;
+  /* height: 4vw; */
   font-family: 'Raleway', sans-serif;
   z-index: 1000;
   
@@ -20,16 +20,16 @@ header {
   font-family: 'Bad Script', cursive;
   /* width: 20vw; */
   display: flex;
-  padding-top: 1vw;
-  flex-direction: column;
+  /* padding-top: 1vw; */
+  /* flex-direction: column; */
   justify-content: center;
-  color: rgb(241, 228, 203);
+  color: rgb(255, 255, 255);
   /* border: 2px dashed wheat; */
 }
 
 .logo h1 {
   /* transform: rotate(-10deg) translate(0vw, 0vw); */
-  font-size: 2vw;
+  font-size: 2.2vw;
   margin: 0;
 }
 
@@ -40,7 +40,7 @@ header {
   /* border: white 2px dashed; */
   /* display: flex; */
   /* align-items: end; */
-  transform: translate(-.2vw,-1.5vw);
+  transform: translate(-3vw,2.6vw)
   /* transform: rotate(-10deg) translate(7.5vw, -.4vw); */
 }
 
@@ -136,8 +136,9 @@ nav p a {
 }
 
 .logo h4 {
-  display: none;
-  /* transform: rotate(-10deg) translate(7.5vw, -.4vw); */
+  font-size: 2.5vw;
+  /* display: none; */
+  transform: translate(-7vw,5.5vw);
 }
 
   .menu-toggle {

@@ -1,20 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Historia from './components/Historia';
-
 import Companias from './components/Companias';
-
+import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
-
-// import Footer from './components/Footer';
-import Home from './pages/Home';
 import './App.css'
-import fondo from '../src/assets/underConst.jpg';
+import Cotizador from './pages/Cotizador';
 
 function App() {
   return (
     <div className='app-container'>
       <Header/>
+      <Cotizador/>
       {/* <Router>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -23,7 +20,7 @@ function App() {
       {/* <Historia/>
       <Companias/> */}
       <WhatsAppButton/>
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }

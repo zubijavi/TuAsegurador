@@ -1,9 +1,10 @@
 footer {
   display: flex;
+  margin-top: 0.3vw;
   padding: 0.5vw 2vw;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  /* width: 100%; */
   background-color: rgb(243, 243, 243);
 }
 
@@ -94,8 +95,9 @@ footer {
 
 
 
-@media (max-width: 576px) {
+@media (max-width: 750px) {
   footer {
+    padding: 1.5vw;
     flex-direction: column;
     display: grid;
     grid-template-columns: 1fr 1fr;

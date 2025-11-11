@@ -1,0 +1,219 @@
+/* --- MAIN --- */
+main {
+    background: #eee4e4;
+    margin-top: 0.3vw;
+    display: flex;
+    padding: 1vw;
+    gap: 2vw;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* -- Estilos Para cotizador Auto */
+.form-container {
+    background-color: #fff;
+    padding: 2rem 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #671D49;
+    font-family: Raleway, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #555;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+    border-color: #671D49;
+}
+
+button {
+    width: 100%;
+    background-color: #671D49;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #8a2f68;
+}
+
+/* --- Sección “Por qué elegirnos” --- */
+:root {
+    --accent: #671D49;
+    --muted: #6b6b6b;
+    --bg: #fff;
+    --radius: 12px;
+}
+
+.why-us {
+    background: linear-gradient(180deg, rgba(103, 29, 73, 0.04), transparent 40%);
+    padding: 48px 16px;
+    font-family: Inter, system-ui, -apple-system, "Helvetica Neue", Arial;
+    color: #111;
+}
+
+.why-us .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.why-us h2 {
+    color: var(--accent);
+    font-size: 1.9rem;
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.feature {
+    background: #fff;
+    border-radius: var(--radius);
+    padding: 18px;
+    box-shadow: 0 6px 18px rgba(16, 16, 16, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(16, 16, 16, 0.1);
+}
+
+.feature .icon {
+    background: rgba(103, 29, 73, 0.08);
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature h3 {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.feature p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.stats {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+    flex-wrap: wrap;
+}
+
+.stat {
+    text-align: center;
+    min-width: 120px;
+    padding: 10px 14px;
+}
+
+.stat .num {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.stat .label {
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .why-us {
+        padding: 32px 12px;
+    }
+
+    .feature {
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .feature p {
+        font-size: 0.9rem;
+    }
+
+    .feature h3 {
+        font-size: 1rem;
+    }
+}
+
+/* --- Responsive para main --- */
+@media (max-width: 750px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "cotizador"
+            "sarasa";
+    }
+
+    .form-container {
+        grid-area: cotizador;
+        margin-top: 10vw;
+    }
+
+    .why-us {
+        grid-area: sarasa;
+    }
+}

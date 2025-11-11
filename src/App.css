@@ -2,16 +2,12 @@
 
 body {
   font-family: 'Raleway', sans-serif !important;
-  background: #090912;
-  background: linear-gradient(90deg, rgba(9, 9, 18, 1) 0%, rgba(45, 52, 54, 1) 100%);
-  /* background-image: url('/5053309.jpg'); */
-  /* background-size: cover; */
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
+  background: #6b6b6b;
   min-height: 100vh;
   margin: 0;
 }
-.app-container{
+
+.app-container {
   margin-top: 0;
   padding: 0;
 }

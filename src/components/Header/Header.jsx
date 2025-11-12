@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
 import "./Header.css";
 
-import logo from '../../assets/logoJz2.png'
+
+import logo from "../../assets/logo3.png";
 
 const Header = () => {
   useEffect(() => {
     const menuToggle = document.querySelector(".menu-toggle");
     const nav = document.querySelector("nav");
     const submenus = document.querySelectorAll(".submenu");
+    const navLinks = document.querySelectorAll("nav a, nav p");
 
     // --- Abrir/cerrar menú hamburguesa ---
     const toggleMenu = (e) => {
@@ -18,7 +20,16 @@ const Header = () => {
     };
     menuToggle?.addEventListener("click", toggleMenu);
 
-    // --- Abrir/cerrar submenús (click en label) ---
+    // --- Cerrar menú al hacer click en un enlace ---
+    const closeMenuOnLinkClick = () => {
+      nav.classList.remove("active");
+      menuToggle.classList.remove("fa-xmark");
+      menuToggle.classList.add("fa-bars");
+      submenus.forEach((m) => m.classList.remove("open"));
+    };
+    navLinks.forEach((link) => link.addEventListener("click", closeMenuOnLinkClick));
+
+    // --- Abrir/cerrar submenús ---
     const handleSubmenuClick = (e, menu) => {
       e.stopPropagation();
       submenus.forEach((m) => m !== menu && m.classList.remove("open"));
@@ -33,18 +44,17 @@ const Header = () => {
     // --- Cerrar menú y submenús al hacer clic fuera ---
     const closeAll = (e) => {
       if (nav.contains(e.target) || menuToggle.contains(e.target)) return;
-      nav.classList.remove("active");
-      submenus.forEach((m) => m.classList.remove("open"));
-      menuToggle.classList.remove("fa-xmark");
-      menuToggle.classList.add("fa-bars");
+      closeMenuOnLinkClick();
     };
-
     document.addEventListener("click", closeAll);
 
     // --- Limpieza ---
     return () => {
       menuToggle?.removeEventListener("click", toggleMenu);
       document.removeEventListener("click", closeAll);
+      navLinks.forEach((link) =>
+        link.removeEventListener("click", closeMenuOnLinkClick)
+      );
       submenus.forEach((menu) => {
         const label = menu.querySelector(".submenu-label");
         label?.removeEventListener("click", (e) => handleSubmenuClick(e, menu));
@@ -53,43 +63,18 @@ const Header = () => {
   }, []);
 
   return (
-    <header id="inicio">
+    <header>
       <div className="logo">
-        <h1>TuAsegurador</h1>
-        <h4>.com.ar</h4>
-        {/* <img src={logo} alt="logo" /> */}
+        <img src={logo} alt="logo" />
       </div>
 
       {/* Icono de menú hamburguesa */}
       <i className="fas fa-bars menu-toggle"></i>
 
       <nav>
-        <p>INICIO</p>
-
-        {/* <div className="submenu">
-          <p className="submenu-label">Seguros ▾</p>
-          <div className="submenu-content">
-            <p>Autos</p>
-            <p>Hogar</p>
-            <p>Vida</p>
-            <p>Comercio</p>
-          </div>
-        </div> */}
-
-        <p>CONTACTO</p>
-
-        {/* <div className="submenu">
-          <p className="submenu-label">Ayuda ▾</p>
-          <div className="submenu-content">
-            <p>Quiénes Somos</p>
-            <p>Preguntas Frecuentes</p>
-          </div>
-        </div> */}
-
-        {/* <p>Blog</p> */}
-        <p>
-          <a href="#info">INFO</a>
-        </p>
+        {/* <p><a href="#inicio">INICIO</a></p> */}
+        <p><a href="#contacto">CONTACTO</a></p>
+        <p><a href="#info">INFO</a></p>
       </nav>
     </header>
   );

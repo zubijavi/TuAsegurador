@@ -9,7 +9,7 @@ header {
   align-items: center;
   position: relative;
   padding: 0.3vw 2vw;
-  /* height: 4vw; */
+  height: 5vw;
   font-family: 'Raleway', sans-serif;
   z-index: 1000;
 
@@ -50,7 +50,10 @@ header {
     /* transform: rotate(-10deg) translate(7.5vw, -.4vw); */
 }
 
-.logo img {}
+.logo img {
+  height: 10vw;
+  filter: brightness(0) invert(1);
+}
 
 /* --- Navegación principal --- */
 nav {
@@ -77,9 +80,11 @@ nav p a {
   text-decoration: none;
   color: rgb(223, 223, 223);
 }
+
 nav p:hover {
   color: rgb(19, 111, 160);
 }
+
 nav a:hover {
   color: rgb(19, 111, 160);
 }
@@ -155,6 +160,10 @@ nav a:hover {
     font-size: 2.5vw;
     /* display: none; */
     transform: rotate(-6deg) translate(-7vw, 4.5vw);
+  }
+
+  .logo img {
+    height: 20vw;
   }
 
   .menu-toggle {

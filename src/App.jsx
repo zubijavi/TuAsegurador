@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import './App.css'
 import Cotizador from './pages/Cotizador';
+import Contacto from './components/Contacto';
+import ScrollToTopButton from './components/ScrollToTopButton';
 
 function App() {
   return (
@@ -19,7 +21,9 @@ function App() {
       </Router> */}
       {/* <Historia/> */}
       {/* <Companias/> */}
+      <ScrollToTopButton/>
       <WhatsAppButton/>
+      <Contacto/>
       <Footer/>
     </div>
   );

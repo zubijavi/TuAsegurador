@@ -1,0 +1,29 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 20vw;
+  right: 1vw;
+  background-color: #222;
+  color: white;
+  border: none;
+  /* border-radius: 50%; */
+  width: 10vw;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+    opacity: .65; /* 🔹 Hace el botón semi-transparente */
+}
+
+.scroll-to-top:hover {
+  background-color: #555;
+  transform: scale(1.1);
+}
+
+.scroll-to-top svg {
+  vertical-align: middle;
+}
+
+@media (max-width: 768px){
+
+}

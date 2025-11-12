@@ -53,7 +53,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header>
+    <header id="inicio">
       <div className="logo">
         <h1>TuAsegurador</h1>
         <h4>.com.ar</h4>
@@ -64,9 +64,9 @@ const Header = () => {
       <i className="fas fa-bars menu-toggle"></i>
 
       <nav>
-        <p>Inicio</p>
+        <p>INICIO</p>
 
-        <div className="submenu">
+        {/* <div className="submenu">
           <p className="submenu-label">Seguros ▾</p>
           <div className="submenu-content">
             <p>Autos</p>
@@ -74,21 +74,21 @@ const Header = () => {
             <p>Vida</p>
             <p>Comercio</p>
           </div>
-        </div>
+        </div> */}
 
-        <p>Siniestros</p>
+        <p>CONTACTO</p>
 
-        <div className="submenu">
+        {/* <div className="submenu">
           <p className="submenu-label">Ayuda ▾</p>
           <div className="submenu-content">
             <p>Quiénes Somos</p>
             <p>Preguntas Frecuentes</p>
           </div>
-        </div>
+        </div> */}
 
-        <p>Blog</p>
+        {/* <p>Blog</p> */}
         <p>
-          <a href="#info">Info</a>
+          <a href="#info">INFO</a>
         </p>
       </nav>
     </header>

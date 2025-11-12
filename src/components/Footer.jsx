@@ -3,39 +3,45 @@ import ssn from '../assets/ssn.png'
 
 export default function Footer() {
   return (
-    <footer id="contacto">
+    <footer id="info">
       <div className='footerIzq'>
-        <div className='nombre'>
-          <h1>JZ</h1>
-          <h6>Productor de Seguros Mat 81915</h6>
-        </div>
-        <div className='mail'>
-          <a href="mailto:info@seguros.com"><i class="fa-solid fa-envelope"></i> javierzubillaga@outlook.com.ar</a>
-        </div>
-        <div className='whatsApp'>
-          <div>
-            <span><a href="https://wa.me/5493413354935" target="_blank"><i class="fa-brands fa-whatsapp">  </i> 3413354935</a></span>
-          </div>
-        </div>
-        <div className='direcciones'>
-          <div>
-            <span><i class="fa-solid fa-location-dot"></i> Mitre 208, Rosario (Santa Fe)</span>
-          </div>
-          <div>
-            <span><i class="fa-solid fa-location-dot"></i> 81 nº 981, Necochea (Bs As)</span>
-          </div>
-        </div>
+        <p className='titulo'>TU ASEGURADOR</p>
+        <p className='direccion'>Calle 81 Nº 981</p>
+        <p className='direccion'>7630 Necochea, Buenos Aires, Argentina</p>
+        <p className='mail'>Mail: <a href="mailto:info@seguros.com">info@tuasegurador.com.ar</a></p>
+        <p className='telefono'><a href="https://wa.me/5493413354935" target="_blank">+54-341-3354935</a></p>
       </div>
+      
       <div className='footerMedio'>
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-whatsapp"></i>
-        <i class="fa-solid fa-envelope"></i>
+        <div>
+          <p className='titulo'>MENÚ</p>
+          <p><a href="#inicio">Inicio</a></p>
+          <p>Seguros</p>
+          <p>Siniestros</p>
+          <p>Ayuda</p>
+          <p>Blog</p>
+          <p>Info</p>
+        </div>
       </div>
       <div className='footerDer'>
-        <img src={ssn} alt="" />
-        <p>0800-666-8400</p>
+        <div className='arriba'>
+            <p className='titulo'>REDES</p>
+          <div>
+            <a href="https://facebook.com/tuperfil" aria-label="Facebook" target="_blank" rel="noopener">
+              <i class="fab fa-facebook-f" aria-hidden="true"></i>
+            </a>
+            <a href="https://instagram.com/tuperfil" aria-label="Instagram" target="_blank" rel="noopener">
+              <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="https://linkedin.com/in/tuperfil" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div className='abajo'>
+          <img src={ssn} alt="" />
+          <p>0800-666-8400</p>
+        </div>
       </div>
     </footer >
   );

@@ -23,8 +23,6 @@
 
 }
 .historia .nosotros video{
-    /* border: red dashed 2px; */
-
     width: 45vw;
     border-radius: 5%;
 }
@@ -34,11 +32,16 @@
         padding: 0;
         margin: 0;
     }
+    .historia .nosotros{
+        flex-direction: column;
+        align-items: center;
+    }
     .historia .nosotros div{
-    width: 90%;
+    width: 99%;
 
 }
-    .historia .nosotros video{
-        display: none;
-    }
+.historia .nosotros video{
+    width: 95vw;
+    border-radius: 5%;
+}
 }

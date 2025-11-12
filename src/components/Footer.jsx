@@ -6,7 +6,7 @@ export default function Footer() {
     <footer id="contacto">
       <div className='footerIzq'>
         <div className='nombre'>
-          <h1>JAVIER ZUBILLAGA</h1>
+          <h1>JZ</h1>
           <h6>Productor de Seguros Mat 81915</h6>
         </div>
         <div className='mail'>

@@ -12,7 +12,7 @@ header {
   /* height: 4vw; */
   font-family: 'Raleway', sans-serif;
   z-index: 1000;
-  
+
 }
 
 /* --- Logo --- */
@@ -30,19 +30,27 @@ header {
 .logo h1 {
   /* transform: rotate(-10deg) translate(0vw, 0vw); */
   font-size: 2.2vw;
-  margin: 0;
+  background: linear-gradient(30deg, #2b620b, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: rotate(-6deg);
 }
 
 .logo h4 {
   font-size: 1vw;
-  margin: 0;
+  background: linear-gradient(30deg, #2b620b, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: right;
+
   /* border: white 2px dashed; */
   /* display: flex; */
   /* align-items: end; */
-  transform: translate(-3vw,2.6vw)
-  /* transform: rotate(-10deg) translate(7.5vw, -.4vw); */
+  transform: rotate(-6deg) translate(-3vw, 2vw)
+    /* transform: rotate(-10deg) translate(7.5vw, -.4vw); */
 }
+
+.logo img {}
 
 /* --- Navegación principal --- */
 nav {
@@ -91,7 +99,7 @@ nav p a {
   flex-direction: column;
   min-width: 8rem;
   z-index: 2000;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
 .submenu-content p {
@@ -100,7 +108,7 @@ nav p a {
 }
 
 .submenu-content p:hover {
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* --- Muestra submenu cuando tiene clase .open --- */
@@ -129,17 +137,18 @@ nav p a {
     padding: 1rem 2rem;
     z-index: 2000;
   }
-  .logo h1 {
-  /* transform: rotate(-10deg) translate(0vw, 0vw); */
-  font-size: 5vw;
-  margin: 0;
-}
 
-.logo h4 {
-  font-size: 2.5vw;
-  /* display: none; */
-  transform: translate(-7vw,5.5vw);
-}
+  .logo h1 {
+    /* transform: rotate(-10deg) translate(0vw, 0vw); */
+    font-size: 5vw;
+    margin: 0;
+  }
+
+  .logo h4 {
+    font-size: 2.5vw;
+    /* display: none; */
+    transform: rotate(-6deg) translate(-7vw, 4.5vw);
+  }
 
   .menu-toggle {
     display: block;
@@ -147,7 +156,8 @@ nav p a {
 
   nav {
     position: fixed;
-    top: 11vw; /* altura del header */
+    top: 13vw;
+    /* altura del header */
     left: 0;
     width: 100%;
     background-color: #671D49;
@@ -178,7 +188,7 @@ nav p a {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 0;
     box-shadow: none;
   }

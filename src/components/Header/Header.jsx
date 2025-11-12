@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import "./Header.css";
 
+import logo from '../../assets/logoJz2.png'
+
 const Header = () => {
   useEffect(() => {
     const menuToggle = document.querySelector(".menu-toggle");
@@ -55,6 +57,7 @@ const Header = () => {
       <div className="logo">
         <h1>TuAsegurador</h1>
         <h4>.com.ar</h4>
+        {/* <img src={logo} alt="logo" /> */}
       </div>
 
       {/* Icono de menú hamburguesa */}
@@ -85,7 +88,7 @@ const Header = () => {
 
         <p>Blog</p>
         <p>
-          <a href="./yo.html">Contacto</a>
+          <a href="#info">Info</a>
         </p>
       </nav>
     </header>

@@ -1,59 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100..900&display=swap');
-
 .historia {
-    text-align: center;
-    padding: 3vw 5vw;
-    color: aliceblue;
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+    /* text-align: center; */
+    padding: 1vw 1vw;
+    background-color: aliceblue;
+    color: rgb(42, 41, 41);
     font-size: 1.3vw;
-    font-variation-settings: "wdth" 100;
 }
-
-.info-icons {
-    margin-top: 2rem;
-    gap: 1.5rem;
+.historia h2{
+    text-align: center;
+}
+.historia .nosotros{
+    /* border: red dashed 2px; */
     display: flex;
     justify-content: space-around;
+    margin-top: 2vw;
+}
+.historia .nosotros div{
+    width: 50%;
+    /* border: red dashed 2px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around ;
 
 }
+.historia .nosotros video{
+    /* border: red dashed 2px; */
 
-.info-card {
-    border-radius: 16px;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(189, 185, 185, 0.1);
-    transition: transform 0.2s ease-in-out;
-    font-size: 1vw;
-    margin: 2vw;
+    width: 45vw;
+    border-radius: 5%;
 }
-
-.info-card:hover {
-    transform: translateY(-4px);
-}
-
-.info-icon {
-    font-size: 3vw;
-    margin-bottom: 1rem;
-}
-
-
 @media (max-width: 576px) {
     .historia {
-        font-size: 2vw;
+        font-size: 3vw;
+        padding: 0;
+        margin: 0;
     }
+    .historia .nosotros div{
+    width: 90%;
 
-    .info-icon {
-        font-size: 6vw;
-        margin-bottom: 1rem;
-    }
-
-    .info-card {
-        font-size: 2vw;
-        margin: 2vw;
-    }
-      .info-card h3{
-        font-size: 4vw;
+}
+    .historia .nosotros video{
+        display: none;
     }
 }

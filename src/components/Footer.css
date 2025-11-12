@@ -1,11 +1,12 @@
 footer {
   display: flex;
-  margin-top: 0.3vw;
+  /* margin-top: 0.3vw; */
   padding: 0.5vw 2vw;
   justify-content: space-between;
   align-items: center;
   /* width: 100%; */
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(26, 26, 26);
+  color: rgb(193, 189, 183);
 }
 
 .footerIzq {
@@ -37,7 +38,7 @@ footer {
 
 .footerIzq a {
   text-decoration: none;
-  color: rgb(29, 29, 29);
+  color: rgb(144, 143, 143);
 }
 
 .footerIzq .whatsApp {
@@ -69,6 +70,7 @@ footer {
 
 .footerMedio i {
   font-size: 2.5vw;
+  
 }
 
 .footerDer {
@@ -79,13 +81,14 @@ footer {
 
 .footerDer img {
   width: 15vw;
-  filter: brightness(0.3) invert(0);
+  filter: brightness(0.8) invert(0);
 }
 
 .footerDer p {
+
   text-align: center;
   font-size: 1.5vw;
-  color: rgb(83, 82, 82);
+  color: rgb(193, 189, 183);
   font-family: Arial, Helvetica, sans-serif;
 }
 

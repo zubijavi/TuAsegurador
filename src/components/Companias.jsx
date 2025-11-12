@@ -26,24 +26,14 @@ const companias = [
 
 const Companias = () => {
     return (
-        <section className="py-8 px-4 bg-gray-100">
-            {/* <h2 className="text-2xl font-bold text-center mb-6 text-white">Nos acompañan</h2> */}
-            <div className="cias">
-                {companias.map((compania, index) => (
-                    <div key={index}>
-                        <img
-                            src={compania.logo}
-                            alt={compania.nombre}
-                            className="logosCias"
-                        />
-                    </div>
-                ))}
-            </div>
-
-
-
-
-        </section>
+        <section className='cias'>
+            <img src={sancorLogo} alt="" />
+            <img src={prevencionLogo} alt="" />
+            <img src={bdsLogo} alt="" />
+            <img src={integrityLogo} alt="" />
+            <img src={sancristobalLogo} alt="" />
+            <img src={cooperacionLogo} alt="" />
+        </section >
     );
 };
 

@@ -17,8 +17,8 @@ function App() {
           <Route path="/" element={<Home />} />
         </Routes>
       </Router> */}
-      {/* <Historia/>
-      <Companias/> */}
+      <Historia/>
+      {/* <Companias/> */}
       <WhatsAppButton/>
       <Footer/>
     </div>

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./Header.css";
 
 
-import logo from "../../assets/logo3.png";
+import logo from "../../assets/icono.png";
 
 const Header = () => {
   useEffect(() => {
@@ -66,6 +66,10 @@ const Header = () => {
     <header>
       <div className="logo">
         <img src={logo} alt="logo" />
+        <div className="titulo">
+          <h1>TUASEGURADOR</h1>
+          <h4>.com.ar</h4>
+        </div>
       </div>
 
       {/* Icono de menú hamburguesa */}
@@ -73,6 +77,31 @@ const Header = () => {
 
       <nav>
         {/* <p><a href="#inicio">INICIO</a></p> */}
+        {/* === SUBMENÚ NUEVO === */}
+        <div className="submenu">
+          <p className="submenu-label">SEGUROS <svg
+            className="chevron"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+          </p>
+          <div className="submenu-content">
+            <p><a href="#seguros">Auto</a></p>
+            <p><a href="#cotizador">Moto</a></p>
+            <p><a href="#sinistros">Caucion</a></p>
+            <p><a href="#sinistros">Agropecuarios</a></p>
+
+          </div>
+        </div>
+        {/* === FIN SUBMENÚ === */}
         <p><a href="#contacto">CONTACTO</a></p>
         <p><a href="#info">INFO</a></p>
       </nav>

@@ -25,5 +25,11 @@
 }
 
 @media (max-width: 768px){
+  .scroll-to-top {
+  bottom: 25vw;
+  right: 5vw;
+  /* border-radius: 50%; */
+  width: 14vw;
+}
 
 }

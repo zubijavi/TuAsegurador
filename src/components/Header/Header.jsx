@@ -9,7 +9,8 @@ const Header = () => {
     const menuToggle = document.querySelector(".menu-toggle");
     const nav = document.querySelector("nav");
     const submenus = document.querySelectorAll(".submenu");
-    const navLinks = document.querySelectorAll("nav a, nav p");
+    const navLinks = document.querySelectorAll("nav a"); // solo enlaces reales
+
 
     // --- Abrir/cerrar menú hamburguesa ---
     const toggleMenu = (e) => {

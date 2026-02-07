@@ -76,7 +76,7 @@ function Navbar() {
             className="md:hidden p-2 text-gray-600 dark:text-gray-200"
             onClick={() => setMenuOpen(!menuOpen)}
           >
-            <span className="material-symbols-outlined text-5xl!">
+            <span className="material-symbols-outlined text-3xl!">
               {menuOpen ? "close" : "menu"}
             </span>
           </button>

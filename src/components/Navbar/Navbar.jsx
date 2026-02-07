@@ -19,7 +19,7 @@ function Navbar() {
             {/* Submenu Desktop */}
             <div className="relative group">
               <a
-                className="text-[#111518] dark:text-gray-200 text-l font-medium hover:text-[#234d6d] transition-colors flex items-center gap-1 cursor-pointer"
+                className="flex items-center gap-1 text-[#2f363b] dark:text-gray-200 text-sm font-medium hover:text-[#234d6d] transition-colors"
                 href="#"
               >
                 Sobre Nosotros
@@ -51,13 +51,13 @@ function Navbar() {
             </div>
 
             <a
-              className="text-[#111518] dark:text-gray-200 text-l font-medium hover:text-[#234d6d] transition-colors"
+              className="text-[#2f363b] dark:text-gray-200 text-sm font-medium hover:text-[#234d6d] transition-colors"
               href="#"
             >
               Coberturas
             </a>
             <a
-              className="text-[#111518] dark:text-gray-200 text-l font-medium hover:text-[#234d6d] transition-colors"
+              className="text-[#2f363b] dark:text-gray-200 text-sm font-medium hover:text-[#234d6d] transition-colors"
               href="#"
             >
               Ayuda
@@ -66,7 +66,7 @@ function Navbar() {
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-4">
-            <button className="bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold h-10 px-6 rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+            <button className="bg-blue-800 hover:bg-blue-600 text-white text-sm font-bold h-10 px-6 rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
               Cotizá Ahora
             </button>
           </div>

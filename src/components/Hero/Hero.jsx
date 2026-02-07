@@ -8,7 +8,7 @@ const slides = [
         badge: "Seguros para vehiculos",
         title: "Seguro Automotor",
         highlight: "",
-        description: "Cobertura total contra robo, incendio y terceros.",
+        description: "Amplia gama de coberturas con las mejores aseguradoras.",
         button: "Cotizar auto"
     },
     {
@@ -105,17 +105,17 @@ const Hero = () => {
             </div>
 
             {/* Arrows */}
-            <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-6 z-20">
+            <div className="absolute inset-x-0 top-2/2 -translate-y-4/2 flex justify-between px-10 z-20">
                 <button
                     onClick={prev}
-                    className="size-12 rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition"
+                    className="size-8 rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition"
                 >
                     ‹
                 </button>
 
                 <button
                     onClick={next}
-                    className="size-12 rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition"
+                    className="size-8 rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition"
                 >
                     ›
                 </button>

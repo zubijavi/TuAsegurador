@@ -4,23 +4,23 @@ const Whatsapp = () => {
       href="https://wa.me/5493410000000"
       target="_blank"
       rel="noopener noreferrer"
-      className="
-        fixed
-        right-8
-        top-150
-        -translate-y-1/2
-        bg-green-500
-        hover:bg-green-600
-        w-12
-        h-12
-        rounded-full
-        flex
-        items-center
-        justify-center
-        shadow-xl
-        transition
-        z-50
-      "
+className="
+  fixed
+  right-6
+  bottom-2
+  md:bottom-12
+  bg-green-700
+  hover:bg-green-800
+  w-11
+  h-11
+  rounded-full
+  flex
+  items-center
+  justify-center
+  shadow-xl
+  transition
+  z-50
+"
     >
       <svg
         viewBox="0 0 32 32"

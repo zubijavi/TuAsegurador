@@ -22,10 +22,10 @@ function Navbar() {
                 className="flex items-center gap-1 text-[#2f363b] dark:text-gray-200 text-sm font-medium hover:text-[#234d6d] transition-colors"
                 href="#"
               >
-                Sobre Nosotros
-                <span className="material-symbols-outlined text-sm">
+                Coberturas
+                {/* <span className="material-symbols-outlined text-sm">
                   expand_more
-                </span>
+                </span> */}
               </a>
 
               <div className="absolute left-0 top-full mt-2 w-48 bg-white dark:bg-[#101a22] rounded-lg shadow-lg border border-gray-200 dark:border-gray-800 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
@@ -33,19 +33,19 @@ function Navbar() {
                   href="#"
                   className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
                 >
-                  Historia
+                  Autos
                 </a>
                 <a
                   href="#"
                   className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
                 >
-                  Equipo
+                  Motos
                 </a>
                 <a
                   href="#"
                   className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
                 >
-                  Valores
+                  Cultivos
                 </a>
               </div>
             </div>
@@ -54,22 +54,22 @@ function Navbar() {
               className="text-[#2f363b] dark:text-gray-200 text-sm font-medium hover:text-[#234d6d] transition-colors"
               href="#"
             >
-              Coberturas
+              Ayuda
             </a>
-            <a
+                     <a
               className="text-[#2f363b] dark:text-gray-200 text-sm font-medium hover:text-[#234d6d] transition-colors"
               href="#"
             >
-              Ayuda
+              Contacto
             </a>
           </div>
 
           {/* CTA */}
-          <div className="hidden md:flex items-center gap-4">
-            <button className="bg-blue-800 hover:bg-blue-600 text-white text-sm font-bold h-10 px-6 rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+          {/* <div className="hidden md:flex items-center gap-4">
+            <button className="bg-blue-950 hover:bg-blue-900 text-white text-sm font-bold h-10 px-6 rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
               Cotizá Ahora
             </button>
-          </div>
+          </div> */}
 
           {/* Mobile Menu Button */}
           <button
@@ -92,7 +92,7 @@ function Navbar() {
               onClick={() => setSubmenuOpen(!submenuOpen)}
               className="w-full flex justify-between items-center px-6 py-3 text-[#111518] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 font-medium"
             >
-              Sobre Nosotros
+              Coberturas
               <span className="material-symbols-outlined">
                 {submenuOpen ? "expand_less" : "expand_more"}
               </span>
@@ -103,39 +103,45 @@ function Navbar() {
                   href="#"
                   className="block px-8 py-2 text-[#111518] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
                 >
-                  Historia
+                  Autos
                 </a>
                 <a
                   href="#"
                   className="block px-8 py-2 text-[#111518] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
                 >
-                  Equipo
+                  Motos
                 </a>
                 <a
                   href="#"
                   className="block px-8 py-2 text-[#111518] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
                 >
-                  Valores
+                  Cultivo
                 </a>
               </div>
             )}
           </div>
 
-          <a
+          {/* <a
             href="#"
             className="block px-6 py-3 text-[#111518] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
           >
             Coberturas
-          </a>
+          </a> */}
           <a
             href="#"
             className="block px-6 py-3 text-[#111518] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
           >
             Ayuda
           </a>
-          <button className="w-full text-left px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-bold rounded-b-lg transition-all">
+                  <a
+            href="#"
+            className="block px-6 py-3 text-[#111518] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+          >
+            Contacto
+          </a>
+          {/* <button className="w-full text-left px-6 py-3 bg-blue-950 hover:bg-blue-900 text-white font-bold rounded-b-lg transition-all">
             Cotizá Ahora
-          </button>
+          </button> */}
         </div>
       )}
     </nav>

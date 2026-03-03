@@ -9,7 +9,7 @@ const slides = [
         title: "Seguro Automotor",
         highlight: "",
         description: "Amplia gama de coberturas con las mejores aseguradoras.",
-        button: "Cotizar auto"
+        button: "Cotizar"
     },
     {
         image: girasol,
@@ -17,7 +17,7 @@ const slides = [
         title: "Seguros Agricolas",
         highlight: "",
         description: "Seguros agrícolas adaptados a cada campaña.",
-        button: "Cotizar agro"
+        button: "Cotizar"
     }
 ];
 

@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero/Hero';
+import Ventajas from './components/Ventajas/Ventajas';
 import UnderConst from './components/UnderConst/UnderConst';
 import Whatsapp from './components/WhatsApp/WhatsApp';
 import Footer from './components/Footer/Footer'
@@ -12,6 +13,7 @@ function App() {
     <div className='app-container'>
       <Navbar/>
       <Hero/>
+      <Ventajas/>
       <UnderConst/>
       <Whatsapp/>
       <Footer/>

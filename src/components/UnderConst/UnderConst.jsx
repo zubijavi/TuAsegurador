@@ -12,8 +12,8 @@ function UnderConst() {
   return (
     <div className="relative min-h-[80vh] md:min-h-[20vh] py-12 flex flex-col items-center justify-center bg-gray-100 text-gray-900 px-4">
     {/* <div className="borde min-h-screen flex flex-col items-center justify-center bg-gray-100  text-gray-900 px-4"> */}
-      <h1 className="text-xl font-bold mb-4 text-center">🚧 Sitio en Construcción 🚧</h1>
-      <p className="text-lg mb-10 text-center">
+      <h1 className="text-l font-bold mb-4 text-center">🚧 Sitio en Construcción 🚧</h1>
+      <p className="text-xs mb-10 text-center">
         Estamos trabajando para ofrecerte la mejor experiencia. Mientras tanto, conoce nuestras compañías asociadas:
       </p>
 
@@ -24,7 +24,7 @@ function UnderConst() {
             key={index}
             className="flex items-center justify-center p-4 bg-white dark:bg-[#1a2a38] rounded-lg shadow hover:scale-105 transition-transform"
           >
-            <img src={logo} alt={`Logo ${index + 1}`} className="max-h-16 object-contain" />
+            <img src={logo} alt={`Logo ${index + 1}`} className="max-h-12 object-contain" />
           </div>
         ))}
       </div>

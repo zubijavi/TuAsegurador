@@ -8,7 +8,7 @@ export default function DolarBNA() {
   useEffect(() => {
     const fetchDolar = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/dolar-bna");
+        const response = await fetch("/api/dolar-bna");
         if (!response.ok) throw new Error("Error al obtener datos");
 
         const data = await response.json();

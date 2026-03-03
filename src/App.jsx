@@ -13,10 +13,10 @@ function App() {
   return (
     <div className='app-container'>
       <Navbar/>
-      <DolarBNA/>
       <Hero/>
       <Ventajas/>
       <UnderConst/>
+      <DolarBNA/>
       <Whatsapp/>
       <Footer/>
     </div>

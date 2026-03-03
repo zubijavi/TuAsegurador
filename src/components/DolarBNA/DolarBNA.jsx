@@ -8,7 +8,7 @@ export default function DolarBNA() {
   useEffect(() => {
     const fetchDolar = async () => {
       try {
-        const response = await fetch("https://monedapi.ar/api/usd/bna");
+        const response = await fetch("http://localhost:3000/api/dolar-bna");
         if (!response.ok) throw new Error("Error al obtener datos");
 
         const data = await response.json();
@@ -28,7 +28,7 @@ export default function DolarBNA() {
   if (error) return <p className="text-center text-red-500">{error}</p>;
 
   return (
-    <div className="max-w-sm mx-auto bg-white shadow-lg rounded-2xl p-6 text-center border">
+    <div className="max-w-sm mx-auto bg-white shadow-lg rounded-2xl p-6 text-center border m-10">
       <h2 className="text-xl font-bold mb-4">
         Dólar Oficial BNA
       </h2>

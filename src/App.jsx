@@ -12,11 +12,11 @@ import './App.css'
 function App() {
   return (
     <div className='app-container'>
+      <DolarBNA/>
       <Navbar/>
       <Hero/>
       <Ventajas/>
       <UnderConst/>
-      <DolarBNA/>
       <Whatsapp/>
       <Footer/>
     </div>

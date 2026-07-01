@@ -1,4 +1,5 @@
 import girasol from "../assets/Girasol.jpg";
+import DolarBNA from "../components/DolarBNA/DolarBNA";
 
 
 export default function SeguroAgro(){
@@ -50,7 +51,7 @@ export default function SeguroAgro(){
 
             </section>
 
-
+        <DolarBNA />
 
 
 

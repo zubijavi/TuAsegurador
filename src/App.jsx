@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar';
-import DolarBNA from './components/DolarBNA/DolarBNA';
 import UnderConst from './components/UnderConst/UnderConst';
 import Ventajas from './components/Ventajas/Ventajas';
 import Whatsapp from './components/WhatsApp/WhatsApp';
@@ -16,7 +15,6 @@ import './App.css';
 function App() {
   return (
     <>
-      <DolarBNA />
       <Navbar />
 
       <Routes>

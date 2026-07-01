@@ -7,7 +7,7 @@ function Navbar() {
   const [submenuOpen, setSubmenuOpen] = useState(false); // Submenu móvil
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/90 dark:bg-[#101a22]/90 backdrop-blur-md border-b border-[#f0f3f4] dark:border-[#2a3b47]">
+    <nav className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-[#f0f3f4] dark:border-[#2a3b47]">
       <div className="max-w-7xl mx-auto px-4 sm:px-10 py-4">
         <div className="flex items-center justify-between h-10">
           {/* Logo */}

@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import ScrollToTop from "./components/ScrollToTop";
 
 import Navbar from './components/Navbar/Navbar';
 import UnderConst from './components/UnderConst/UnderConst';
@@ -15,6 +16,7 @@ import './App.css';
 function App() {
   return (
     <>
+     <ScrollToTop />
       <Navbar />
 
       <Routes>

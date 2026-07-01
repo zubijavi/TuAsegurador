@@ -1,13 +1,15 @@
 import girasol from "../assets/Girasol.jpg";
 import DolarBNA from "../components/DolarBNA/DolarBNA";
+import Cotizador from "../components/Cotizador";
 
 
-export default function SeguroAgro(){
+
+export default function SeguroAgro() {
 
 
     return (
 
-        <main className="min-h-screen bg-gray-100">
+        <main className="bg-gray-100">
 
 
 
@@ -18,13 +20,13 @@ export default function SeguroAgro(){
                 className="relative h-[20vh] bg-cover bg-center flex items-center"
 
                 style={{
-                    backgroundImage:`url(${girasol})`
+                    backgroundImage: `url(${girasol})`
                 }}
 
             >
 
 
-                <div className="absolute inset-0 bg-black/60"/>
+                <div className="absolute inset-0 bg-black/60" />
 
 
 
@@ -51,7 +53,7 @@ export default function SeguroAgro(){
 
             </section>
 
-        <DolarBNA />
+            <DolarBNA />
 
 
 
@@ -59,95 +61,64 @@ export default function SeguroAgro(){
             {/* INFORMACION */}
 
 
-            <section className="max-w-6xl mx-auto px-6 py-16">
+  <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-start">
 
+  {/* IZQUIERDA: CONTENIDO */}
+  <div>
 
+    <h2 className="text-3xl font-bold text-gray-800 mb-10">
+      Coberturas agrícolas
+    </h2>
 
-                <h2 className="text-3xl font-bold text-gray-800 mb-10 text-center">
+    <div className="grid md:grid-cols-3 gap-6">
 
-                    Coberturas agrícolas
+      <div className="bg-white rounded-xl shadow p-6">
+        <h3 className="font-bold text-xl mb-3">
+          Granizo
+        </h3>
+        <p className="text-gray-600">
+          Protección frente a eventos climáticos.
+        </p>
+      </div>
 
-                </h2>
+      <div className="bg-white rounded-xl shadow p-6">
+        <h3 className="font-bold text-xl mb-3">
+          Cultivos
+        </h3>
+        <p className="text-gray-600">
+          Coberturas adaptadas a cada producción.
+        </p>
+      </div>
 
+      <div className="bg-white rounded-xl shadow p-6">
+        <h3 className="font-bold text-xl mb-3">
+          Asesoramiento
+        </h3>
+        <p className="text-gray-600">
+          Acompañamiento personalizado para tu campo.
+        </p>
+      </div>
 
+    </div>
 
+  </div>
 
+  {/* DERECHA: COTIZADOR */}
+  <div className="bg-white shadow rounded-xl p-6">
 
-                <div className="grid md:grid-cols-3 gap-6">
+    <h3 className="text-xl font-bold mb-4">
+      Cotizá tu seguro agrícola
+    </h3>
 
+    <Cotizador type="agro" />
 
+    <button className="w-full mt-6 bg-blue-700 text-white py-3 rounded-lg hover:bg-blue-800 transition">
+      Enviar solicitud
+    </button>
 
-                    <div className="bg-white rounded-xl shadow p-6">
+  </div>
 
-
-                        <h3 className="font-bold text-xl mb-3">
-
-                            Granizo
-
-                        </h3>
-
-
-                        <p className="text-gray-600">
-
-                            Protección frente a eventos climáticos.
-
-                        </p>
-
-
-                    </div>
-
-
-
-
-
-                    <div className="bg-white rounded-xl shadow p-6">
-
-
-                        <h3 className="font-bold text-xl mb-3">
-
-                            Cultivos
-
-                        </h3>
-
-
-                        <p className="text-gray-600">
-
-                            Coberturas adaptadas a cada producción.
-
-                        </p>
-
-
-                    </div>
-
-
-
-
-
-                    <div className="bg-white rounded-xl shadow p-6">
-
-
-                        <h3 className="font-bold text-xl mb-3">
-
-                            Asesoramiento
-
-                        </h3>
-
-
-                        <p className="text-gray-600">
-
-                            Acompañamiento personalizado para tu campo.
-
-                        </p>
-
-
-                    </div>
-
-
-
-                </div>
-
-
-            </section>
+</section>
 
 
 

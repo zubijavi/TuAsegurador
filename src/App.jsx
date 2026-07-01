@@ -15,8 +15,8 @@ function App() {
       <DolarBNA/>
       <Navbar/>
       <Hero/>
-      <Ventajas/>
       <UnderConst/>
+      <Ventajas/>
       <Whatsapp/>
       <Footer/>
     </div>

@@ -12,10 +12,10 @@ function UnderConst() {
   return (
     <div className="relative min-h-[80vh] md:min-h-[20vh] py-12 flex flex-col items-center justify-center bg-gray-100 text-gray-900 px-4">
     {/* <div className="borde min-h-screen flex flex-col items-center justify-center bg-gray-100  text-gray-900 px-4"> */}
-      <h1 className="text-l font-bold mb-4 text-center">🚧 Sitio en Construcción 🚧</h1>
+      {/* <h1 className="text-l font-bold mb-4 text-center">🚧 Sitio en Construcción 🚧</h1>
       <p className="text-xs mb-10 text-center">
         Estamos trabajando para ofrecerte la mejor experiencia. Mientras tanto, conoce nuestras compañías asociadas:
-      </p>
+      </p> */}
 
       {/* Logos Grid */}
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6">

@@ -42,12 +42,12 @@ export default function Ventajas() {
           {ventajas.map((item, index) => (
             <div
               key={index}
-              className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+              className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300 "
             >
               <div className="text-slate-700 mb-4 flex justify-center">
                 {item.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-3">
+              <h3 className="text-l font-semibold mb-3">
                 {item.titulo}
               </h3>
               <p className="text-gray-600 text-sm">

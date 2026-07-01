@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo7.png"; // Ajustá la ruta según tu proyecto
 
 function Navbar() {
@@ -11,7 +12,9 @@ function Navbar() {
         <div className="flex items-center justify-between h-10">
           {/* Logo */}
           <div className="logo">
-            <img src={logo} alt="Logo" className="h-35" />
+            <Link to="/">
+              <img src={logo} alt="Logo" className="h-35" />
+            </Link>
           </div>
 
           {/* Desktop Menu */}
@@ -56,7 +59,7 @@ function Navbar() {
             >
               Ayuda
             </a>
-                     <a
+            <a
               className="text-[#2f363b] dark:text-gray-200 text-sm font-medium hover:text-[#234d6d] transition-colors"
               href="#"
             >
@@ -133,7 +136,7 @@ function Navbar() {
           >
             Ayuda
           </a>
-                  <a
+          <a
             href="#"
             className="block px-6 py-3 text-[#111518] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
           >

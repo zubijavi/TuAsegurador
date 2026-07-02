@@ -1,28 +1,26 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo7.png"; // Ajustá la ruta según tu proyecto
+import logo from "../../assets/taaa.png"; // Ajustá la ruta según tu proyecto
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(false); // Submenu móvil
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-[#f0f3f4] dark:border-[#2a3b47]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-10 py-4">
+    <nav className="sticky top-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-[#f0f3f4]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-10 py-1">
         <div className="flex items-center justify-between h-10">
           {/* Logo */}
-          <div className="logo">
             <Link to="/">
-              <img src={logo} alt="Logo" className="h-35" />
+              <img src={logo} alt="Logo" className="h-8" />
             </Link>
-          </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             {/* Submenu Desktop */}
-            <div className="relative group">
+            <div className="relative group ">
               <a
-                className="flex items-center gap-1 text-[#2f363b] dark:text-gray-200 text-sm font-medium hover:text-[#234d6d] transition-colors"
+                className="flex items-center gap-1 uppercase text-sm font-medium hover:text-[#234d6d] transition-colors"
                 href="#"
               >
                 Coberturas
@@ -54,13 +52,15 @@ function Navbar() {
             </div>
 
             <a
-              className="text-[#2f363b] dark:text-gray-200 text-sm font-medium hover:text-[#234d6d] transition-colors"
+              className="flex items-center gap-1 uppercase text-sm font-medium hover:text-[#234d6d] transition-colors"
+
               href="#"
             >
               Ayuda
             </a>
             <a
-              className="text-[#2f363b] dark:text-gray-200 text-sm font-medium hover:text-[#234d6d] transition-colors"
+              className="flex items-center gap-1 uppercase text-sm font-medium hover:text-[#234d6d] transition-colors"
+
               href="#"
             >
               Contacto

@@ -13,5 +13,8 @@
   width: max-content;
   animation: marquee 60s linear infinite;
 }
+.raleway {
+  font-family: 'Raleway', sans-serif;
+}
 
 

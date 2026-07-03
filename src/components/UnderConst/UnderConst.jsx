@@ -18,13 +18,13 @@ function UnderConst() {
       </p> */}
 
       {/* Logos Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-3 md:grid-cols-4 gap-6">
         {logos.map((logo, index) => (
           <div
             key={index}
             className="flex items-center justify-center p-4 bg-white rounded-lg shadow hover:scale-105 transition-transform"
           >
-            <img src={logo} alt={`Logo ${index + 1}`} className="max-h-12 object-contain" />
+            <img src={logo} alt={`Logo ${index + 1}`} className="max-h-10 object-contain" />
           </div>
         ))}
       </div>

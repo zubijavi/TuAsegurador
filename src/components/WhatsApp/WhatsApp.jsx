@@ -9,8 +9,7 @@ const Whatsapp = () => {
   right-6
   bottom-20
   md:bottom-12
-  bg-gray-500
-  hover:bg-green-900
+ bg-green-900
   w-11
   h-11
   rounded-full
@@ -20,6 +19,7 @@ const Whatsapp = () => {
   shadow-xl
   transition
   z-50
+  p-1
 "
     >
       <svg

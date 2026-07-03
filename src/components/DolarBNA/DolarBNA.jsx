@@ -42,56 +42,37 @@ export default function DolarBNA() {
 
 
   return (
-    <div className="z-50 w-full bg-black text-white h-8 flex items-center justify-center border-b border-gray-800 shadow-md">
+    <div className="z-50  bg-gray-800 h-auto flex items-center justify-center border-b border-gray-200 shadow-sm">
 
-      <div className="flex items-center justify-center gap-8">
+      <div className="flex flex-wrap md:flex-nowrap items-center justify-center gap-2 md:gap-80  py-1 overflow-x-auto">
 
         {dolar.map((item, index) => (
-
-          <div 
-            key={index} 
-            className="flex items-center gap-3"
+          <div
+            key={index}
+            className="flex justify-between  w-80  md:min-w-0 "
           >
-
-            <span className="text-xs font-bold text-gray-400 uppercase">
-              {item.nombre}
+            {/* Nombre */}
+            <span className="text-xs font-semibold text-gray-600 uppercase tracking-wide">
+              {item.nombre === "Dólar oficial (BNA)" ? "Dólar Oficial" : item.nombre}
             </span>
+            {/* Valores */}
+            <div className="flex items-center gap-2 md:gap-3 text-xs md:text-sm font-medium">
+              <span className="text-gray-500">Compra:</span>
+              <span className="text-green-600">${item.compra}</span>
 
-
-            <div className="flex items-center gap-2 text-sm font-mono">
-
-              <span className="text-[10px] text-gray-500 uppercase">
-                Compra:
-              </span>
-
-              <span className="text-green-400">
-                ${item.compra}
-              </span>
-
-
-              <span className="text-[10px] text-gray-500 uppercase ml-2">
-                Venta:
-              </span>
-
-              <span className="text-blue-400">
-                ${item.venta}
-              </span>
-
+              <span className="text-gray-500 ml-1 md:ml-2">Venta:</span>
+              <span className="text-blue-600">${item.venta}</span>
             </div>
 
-
-            {index < dolar.length - 1 && (
-              <span className="text-gray-600">
-                
-              </span>
-            )}
-
+            {/* Separador */}
+            {/* {index < dolar.length - 1 && (
+          <span className="hidden md:inline text-gray-300">|</span>
+        )} */}
           </div>
-
         ))}
 
       </div>
-
     </div>
+
   );
 }

@@ -4,7 +4,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Navbar from './components/Navbar/Navbar';
 import UnderConst from './components/UnderConst/UnderConst';
 import Ventajas from './components/Ventajas/Ventajas';
-import Whatsapp from './components/WhatsApp/WhatsApp';
+// import Whatsapp from './components/WhatsApp/WhatsApp';
 import Footer from './components/Footer/Footer';
 
 import Home from './pages/Home';
@@ -26,7 +26,7 @@ function App() {
       </Routes>
       <UnderConst />
       <Ventajas />
-      <Whatsapp />
+      {/* <Whatsapp /> */}
       <Footer />
     </>
   );

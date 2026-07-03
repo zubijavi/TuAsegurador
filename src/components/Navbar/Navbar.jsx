@@ -15,7 +15,7 @@ function Navbar() {
           <a
             href="/"
           >
-            <img src={logo} alt="Logo" className="h-8" />
+            <img src={logo} alt="Logo" className="h-4 lg:h-8" />
           </a>
           {/* </Link> */}
 

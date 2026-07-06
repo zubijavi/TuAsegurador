@@ -18,7 +18,7 @@ function UnderConst() {
       </p> */}
 
       {/* Logos Grid */}
-      <div className="grid grid-cols-3 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-4 gap-6">
         {logos.map((logo, index) => (
           <div
             key={index}

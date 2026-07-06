@@ -67,7 +67,7 @@ const Hero = () => {
   };
 
   return (
-    <main className="relative min-h-[70vh] md:min-h-[60vh] w-full flex items-center py-6 overflow-hidden">
+    <main className="relative min-h-[40vh] md:min-h-[60vh] w-full flex items-center py-6 overflow-hidden">
 
       {/* BACKGROUND */}
       <div className="absolute inset-0 z-0">
@@ -94,7 +94,7 @@ const Hero = () => {
           {slides[current].title}
         </h2>
 
-        <p className="text-slate-200 text-lg max-w-lg mb-10">
+        <p className="text-slate-200 text-lg text-center mb-10">
           {slides[current].description}
         </p>
 
@@ -126,18 +126,18 @@ const Hero = () => {
       </div>
 
       {/* FLECHAS */}
-      <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between px-10 z-20">
+      <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex justify-between   px-8 z-20">
 
         <button
           onClick={prev}
-          className="size-8 rounded-full bg-white/10 border border-white/20 text-white cursor-pointer"
+          className="size-8 rounded-full bg-white/30 border border-white/80 text-white cursor-pointer"
         >
           ‹
         </button>
 
         <button
           onClick={next}
-          className="size-8 rounded-full bg-white/10 border border-white/20 text-white cursor-pointer"
+          className="size-8 rounded-full bg-white/30 border border-white/80 text-white cursor-pointer"
         >
           ›
         </button>

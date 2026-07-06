@@ -84,55 +84,77 @@ function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden bg-white dark:bg-[#101a22] border-t border-[#f0f3f4] dark:border-[#2a3b47] shadow-md">
-          {/* Sobre Nosotros con submenú */}
-          <div>
-            <button
-              onClick={() => setSubmenuOpen(!submenuOpen)}
-              className="w-full flex justify-between items-center px-6 py-3 text-[#111518] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 font-medium"
+      {/* Overlay */}
+      <div
+        onClick={() => {
+          setMenuOpen(false);
+          setSubmenuOpen(false);
+        }}
+        className={`fixed inset-0 z-40 duration-300 md:hidden 
+          ${menuOpen ? "visible" : "invisible"}`}
+      />
+
+      {/* Mobile Menu */}
+      <div
+        className={`fixed top-12 right-0 z-50 w-[30%] bg-white
+        shadow-xl border-l border-[#f0f3f4] 
+        transform transition-transform duration-300 ease-in-out
+        md:hidden
+        ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
+      >
+        {/* Header */}
+     
+
+        {/* Coberturas */}
+        <button
+          onClick={() => setSubmenuOpen(!submenuOpen)}
+          className="w-full flex justify-between items-center px-4 py-3 text-[#111518] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 font-medium"
+        >
+          Coberturas
+
+          <span className="material-symbols-outlined">
+            {submenuOpen ? "expand_less" : "expand_more"}
+          </span>
+        </button>
+
+        <div
+          className={`overflow-hidden transition-all duration-300 ${submenuOpen ? "max-h-40" : "max-h-0"
+            }`}
+        >
+          <div className="flex flex-col gap-2 ml-2">
+            <Link 
+              to="/seguro-automotor"
+              onClick={() => {
+                setMenuOpen(false);
+                setSubmenuOpen(false);
+              }}
             >
-              Coberturas
-              <span className="material-symbols-outlined">
-                {submenuOpen ? "expand_less" : "expand_more"}
-              </span>
-            </button>
-            {submenuOpen && (
-              <div className="bg-gray-50 dark:bg-[#1a2a38]">
-                <a
-                  href="/seguro-automotor"
-                  className="block px-8 py-2 text-[#111518] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
-                >
-                  Autos
-                </a>
-                <a
-                  href="/seguro-agro"
-                  className="block px-8 py-2 text-[#111518] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
-                >
-                  Cultivo
-                </a>
-              </div>
-            )}
+              Autos
+            </Link>
+
+            <Link
+              to="/seguro-agro  "
+              onClick={() => {
+                setMenuOpen(false);
+                setSubmenuOpen(false);
+              }}
+            >
+              Granizo
+            </Link>
           </div>
-
-          {/* <a
-            href="#"
-            className="block px-6 py-3 text-[#111518] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
-          >
-            Coberturas
-          </a> */}
-
-          <a
-            href="#footer"
-            className="block px-6 py-3 text-[#111518] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
-          >
-            Contacto
-          </a>
-          {/* <button className="w-full text-left px-6 py-3 bg-blue-950 hover:bg-blue-900 text-white font-bold rounded-b-lg transition-all">
-            Cotizá Ahora
-          </button> */}
         </div>
-      )}
+                 <a
+          href="#footer"
+          className="w-full flex justify-between items-center px-4 py-3 text-[#111518] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 font-medium"
+          onClick={() => {
+            setMenuOpen(false);
+            setSubmenuOpen(false);
+          }}
+        >
+          Contacto
+        </a>
+
+      </div>
     </nav>
   );
 }

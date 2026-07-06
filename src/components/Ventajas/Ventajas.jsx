@@ -3,25 +3,25 @@ import { ShieldCheck, Clock, Users, BadgeDollarSign } from "lucide-react";
 export default function Ventajas() {
   const ventajas = [
     {
-      icon: <ShieldCheck size={40} />,
+      icon: <ShieldCheck className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />,
       titulo: "Cobertura confiable",
       descripcion:
         "Trabajamos con aseguradoras líderes del mercado para brindarte protección real cuando más lo necesitás.",
     },
     {
-      icon: <Clock size={40} />,
+      icon: <Clock className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />,
       titulo: "Atención rápida y personalizada",
       descripcion:
         "Respondemos tus consultas de forma ágil y te acompañamos en todo el proceso, desde la cotización hasta el siniestro.",
     },
     {
-      icon: <BadgeDollarSign size={40} />,
+      icon: <BadgeDollarSign className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />,
       titulo: "Mejor relación precio-calidad",
       descripcion:
         "Buscamos la opción que mejor se adapte a tu presupuesto sin resignar cobertura.",
     },
     {
-      icon: <Users size={40} />,
+      icon: <Users className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12" />,
       titulo: "Asesoramiento humano",
       descripcion:
         "No sos un número. Te asesoramos de manera personalizada para que tomes la mejor decisión.",
@@ -29,16 +29,16 @@ export default function Ventajas() {
   ];
 
   return (
-    <section className="bg-gray-50 py-8 px-6">
+    <section className="bg-gray-50 py-2 px-2">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-slate-700 mb-4">
+        <h2 className="text-2xl md:text-4xl font-bold text-slate-700 mb-2">
           ¿Por qué elegirnos?
         </h2>
-        <p className="text-gray-600 mb-12 max-w-2xl mx-auto">
+        <p className="text-gray-600 p-2 max-w-2xl mx-auto">
           Nos enfocamos en brindarte tranquilidad, respaldo y atención personalizada en cada etapa.
         </p>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-1 grid-cols-4 lg:grid-cols-4">
           {ventajas.map((item, index) => (
             <div
               key={index}
@@ -47,10 +47,10 @@ export default function Ventajas() {
               <div className="text-slate-700 mb-4 flex justify-center">
                 {item.icon}
               </div>
-              <h3 className="text-l font-semibold mb-3">
+              <h3 className="text-sm lg:text-l  mb-3">
                 {item.titulo}
               </h3>
-              <p className="text-gray-600 text-sm">
+              <p className="hidden md:block md:text-sm text-gray-600">
                 {item.descripcion}
               </p>
             </div>

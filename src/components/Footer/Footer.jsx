@@ -9,12 +9,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
           {/* COLUMNA IZQUIERDA */}
-          <div className="flex flex-col items-center text-center">
-            {/* ESTADO */}
-            <div className="bg-slate-800 px-2 py-3 rounded-lg mb-2">
-              <span className="text-green-400">●</span>
-              <span className="text-slate-300 ml-2">Sitio en desarrollo</span>
-            </div>
+          <div className="flex flex-col justify-center items-center">
+  
 
             {/* CONTACTO */}
             <div className="text-slate-400 text-sm flex flex-col items-center gap-2">
@@ -37,11 +33,18 @@ const Footer = () => {
           </div>
 
           {/* COLUMNA DERECHA */}
-          <div className="flex text-gray-300 flex-col gap-4 raleway uppercase items-center justify-center">
-            <h2 className="text-3xl">
+
+          <div className="flex flex-col text-gray-300 gap-8 lg:gap-2 items-center justify-center">
+                 <div className="bg-slate-800 px-2 py-3 rounded-lg mb-2">
+              <span className="text-green-600">●</span>
+              <span className="text-slate-300 ml-2">Sitio en desarrollo</span>
+            </div>
+            <div className="hidden lg:flex flex-col items-center justify-between">
+            <h2 className="text-l raleway uppercase">
               Tu Asegurador
             </h2>
             <p className="text-xs">Javier Zubillaga - Productor de Seguros</p>
+            </div>
           </div>
         </div>
 

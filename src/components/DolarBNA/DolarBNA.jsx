@@ -53,7 +53,7 @@ export default function DolarBNA() {
           >
             {/* Nombre */}
             <span className="text-xs font-semibold text-gray-600 uppercase tracking-wide">
-              {item.nombre === "Dólar oficial (BNA)" ? "Dólar Oficial" : item.nombre}
+              {item.nombre === "Dólar Banco Nación" ? "Dólar BNA" : item.nombre}
             </span>
             {/* Valores */}
             <div className="flex items-center gap-2 md:gap-3 text-xs md:text-sm font-medium">

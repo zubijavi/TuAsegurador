@@ -34,18 +34,18 @@ function Navbar() {
               </a>
 
               <div className="absolute left-0 top-full mt-2 w-48 bg-white dark:bg-[#101a22] rounded-lg shadow-lg border border-gray-200 dark:border-gray-800 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
-                <a
-                  href="/seguro-automotor"
+                <Link
+                  to="/seguro-automotor"
                   className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
                 >
                   Autos
-                </a>
-                <a
-                  href="/seguro-agro"
-                  className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+                </Link>
+                       <Link
+                  to="/seguro-agro"
+                className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
                 >
                   Cultivos
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -103,7 +103,7 @@ function Navbar() {
         ${menuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         {/* Header */}
-     
+
 
         {/* Coberturas */}
         <button
@@ -122,7 +122,7 @@ function Navbar() {
             }`}
         >
           <div className="flex flex-col gap-2 ml-2">
-            <Link 
+            <Link
               to="/seguro-automotor"
               onClick={() => {
                 setMenuOpen(false);
@@ -143,7 +143,7 @@ function Navbar() {
             </Link>
           </div>
         </div>
-                 <a
+        <a
           href="#footer"
           className="w-full flex justify-between items-center px-4 py-3 text-[#111518] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 font-medium"
           onClick={() => {

@@ -1,6 +1,6 @@
 import girasol from "../assets/Girasol.jpg";
 import DolarBNA from "../components/DolarBNA/DolarBNA";
-import Cotizador from "../components/Cotizador";
+import Cotizador from "../components/Cotizador2";
 
 
 

@@ -1,4 +1,4 @@
-import Cotizador from "../components/Cotizador";
+import Cotizador from "../components/Cotizador2";
 import auto from "../assets/auto.jpg";
 
 export default function SeguroAutomotor() {

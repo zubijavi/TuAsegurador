@@ -1,6 +1,6 @@
-export default function Cotizador({ type = "auto" }) {
+export default function Formulario({ type = "auto" }) {
   return (
-    <div className="flex flex-col gap-3 w-full">
+    <div className="flex flex-col gap-3 w-full bg">
 
       {type === "auto" ? (
         <>

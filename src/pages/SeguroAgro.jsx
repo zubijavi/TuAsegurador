@@ -9,7 +9,7 @@ export default function SeguroAgro() {
 
     return (
 
-        <main className="bg-gray-100">
+        <main className="bg-gray-100 ">
 
 
 

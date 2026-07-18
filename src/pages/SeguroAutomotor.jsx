@@ -1,4 +1,4 @@
-import Cotizador from "../components/Cotizador2";
+import Formulario from "../components/Formulario";
 import auto from "../assets/auto.jpg";
 
 export default function SeguroAutomotor() {
@@ -62,7 +62,7 @@ export default function SeguroAutomotor() {
                         Cotizá tu seguro
                     </h2>
 
-                    <Cotizador type="auto" />
+                    <Formulario type="auto" />
 
                     <button className="w-full mt-6 bg-blue-700 text-white py-3 rounded-lg">
                         Enviar solicitud

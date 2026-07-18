@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import auto from "../../assets/auto.jpg";
 import girasol from "../../assets/Girasol.jpg";
 
-import Cotizador from "../Cotizador2";
+import Cotizador from "../Formulario";
 
 const slides = [
   {

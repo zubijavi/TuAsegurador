@@ -1,6 +1,6 @@
 import girasol from "../assets/Girasol.jpg";
 import DolarBNA from "../components/DolarBNA/DolarBNA";
-import Cotizador from "../components/Cotizador2";
+import Formulario from "../components/Formulario";
 
 
 
@@ -110,7 +110,7 @@ export default function SeguroAgro() {
       Cotizá tu seguro agrícola
     </h3>
 
-    <Cotizador type="agro" />
+    <Formulario type="agro" />
 
     <button className="w-full mt-6 bg-blue-700 text-white py-3 rounded-lg hover:bg-blue-800 transition">
       Enviar solicitud

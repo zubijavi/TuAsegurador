@@ -67,7 +67,7 @@ const Hero = () => {
   };
 
   return (
-    <main className="relative min-h-[40vh] md:min-h-[60vh] w-full flex items-center py-6 overflow-hidden">
+    <main className="relative min-h-[40vh] border w-full flex items-center py-6 overflow-hidden">
 
       {/* BACKGROUND */}
       <div className="absolute inset-0 z-0">

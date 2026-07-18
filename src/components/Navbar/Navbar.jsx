@@ -40,9 +40,9 @@ function Navbar() {
                 >
                   Autos
                 </Link>
-                       <Link
+                <Link
                   to="/seguro-agro"
-                className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+                  className="block px-4 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
                 >
                   Cultivos
                 </Link>
@@ -132,6 +132,7 @@ function Navbar() {
               Autos
             </Link>
 
+
             <Link
               to="/seguro-agro  "
               onClick={() => {
@@ -153,6 +154,17 @@ function Navbar() {
         >
           Contacto
         </a>
+        <Link
+          to="/cotizador"
+          className="w-full flex justify-between items-center px-4 py-3 text-[#111518] dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 font-medium"
+
+          onClick={() => {
+            setMenuOpen(false);
+            setSubmenuOpen(false);
+          }}
+        >
+          Cotizar Seguro Auto
+        </Link>
 
       </div>
     </nav>

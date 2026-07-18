@@ -10,19 +10,23 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
 import SeguroAutomotor from './pages/SeguroAutomotor';
 import SeguroAgro from './pages/SeguroAgro';
+import Cotizador from './components/cotizador/Cotizador'
 
 import './App.css';
 
 function App() {
   return (
     <>
-     <ScrollToTop />
+
+      <ScrollToTop />
       <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/seguro-automotor" element={<SeguroAutomotor />} />
         <Route path="/seguro-agro" element={<SeguroAgro />} />
+        <Route path="/cotizador" element={<Cotizador />} />
+
       </Routes>
       <UnderConst />
       <Ventajas />

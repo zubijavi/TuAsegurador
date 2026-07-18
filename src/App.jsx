@@ -10,7 +10,7 @@ import Footer from './components/Footer/Footer';
 import Home from './pages/Home';
 import SeguroAutomotor from './pages/SeguroAutomotor';
 import SeguroAgro from './pages/SeguroAgro';
-import Cotizador from './components/cotizador/Cotizador'
+import Cotizador from "./components/CotizadorTemp/Cotizador";
 
 import './App.css';
 

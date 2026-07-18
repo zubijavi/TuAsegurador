@@ -21,10 +21,16 @@ function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
+                <Link
+              to="/cotizador"
+              className="flex items-center gap-1 uppercase text-sm font-medium text-[#234d6d] transition-colors"
+            >
+              Cotizar Seguro Auto
+            </Link>
             {/* Submenu Desktop */}
             <div className="relative group ">
               <a
-                className="flex items-center gap-1 uppercase text-sm font-medium hover:text-[#234d6d] transition-colors cursor-pointer"
+                className="flex items-center gap-1  text-sm font-medium text-[#234d6d] transition-colors"
 
               >
                 Coberturas
@@ -58,10 +64,11 @@ function Navbar() {
             </a> */}
             <a
               href="#footer"
-              className="flex items-center gap-1 uppercase text-sm font-medium hover:text-[#234d6d] transition-colors"
+              className="flex items-center gap-1  text-sm font-medium text-[#234d6d] transition-colors"
             >
               Contacto
             </a>
+        
           </div>
 
           {/* CTA */}

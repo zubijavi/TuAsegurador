@@ -1,7 +1,12 @@
 import { useState } from "react";
+
 import axios from "axios";
 
+
+
 const BACKEND = "https://backcoti.onrender.com/api/contrataciones";
+
+
 
 function money(value) {
 
@@ -17,11 +22,11 @@ function money(value) {
 
 }
 
-export default function QuoteCard({
-    quote,
-    vehicle,
-    location
-}) {
+
+
+export default function QuoteCard({ quote, vehicle, location }) {
+
+
 
     const [showPhone, setShowPhone] = useState(false);
 
@@ -30,6 +35,8 @@ export default function QuoteCard({
     const [sending, setSending] = useState(false);
 
     const [message, setMessage] = useState("");
+
+
 
     async function enviar() {
 
@@ -54,7 +61,9 @@ export default function QuoteCard({
                 location: {
 
                     zipCode: location.codpos,
+
                     localidad: location.localidad,
+
                     provincia: location.provincia
 
                 },
@@ -62,8 +71,11 @@ export default function QuoteCard({
                 client: {
 
                     firstName: "Carlos",
+
                     lastName: "Menem",
+
                     email: "elcarlom@gmail.com",
+
                     phone
 
                 },
@@ -76,15 +88,11 @@ export default function QuoteCard({
 
             setMessage("Solicitud enviada correctamente.");
 
-        }
-
-        catch {
+        } catch {
 
             setMessage("No se pudo enviar la solicitud.");
 
-        }
-
-        finally {
+        } finally {
 
             setSending(false);
 
@@ -92,45 +100,75 @@ export default function QuoteCard({
 
     }
 
+
+
+    function getHighlights(plan) {
+
+        if (plan.includes("Resp. Civil")) return ["Responsabilidad Civil"];
+
+        if (plan.includes("Terceros Completo sin Granizo"))
+
+            return ["Robo Parcial", "Incendio Parcial", "Cristales", "Sin cobertura de granizo"];
+
+        if (plan.includes("Terceros Completo"))
+
+            return ["Robo Parcial", "Incendio Parcial", "Cristales", "Granizo"];
+
+        if (plan.includes("Terceros Premium"))
+
+            return ["Robo Parcial", "Incendio Parcial", "Granizo", "Cristales y Cerraduras"];
+
+        if (plan.includes("Todo Riesgo c/Franquicia 5%"))
+
+            return ["Daños Totales y Parciales", "Franquicia 5%", "Granizo", "Cristales"];
+
+        if (plan.includes("Todo Riesgo c/Franquicia 8%"))
+
+            return ["Daños Totales y Parciales", "Franquicia 8%", "Granizo", "Cristales"];
+
+        return quote.highlights || [];
+
+    }
+
+
+
+    const highlights = getHighlights(quote.planName);
+
+
+
     return (
 
-        <div className="quote-card">
+        <div className="bg-white/90 backdrop-blur-md rounded-lg shadow-lg border border-[#f0f3f4] p-5">
 
-            <div className="quote-top">
+
+
+            <div className="flex justify-between items-start">
 
                 <div>
 
-                    <div className="quote-insurer">
+                    <div className="text-[#234d6d] font-bold text-base">{quote.insurer}</div>
 
-                        {quote.insurer}
-
-                    </div>
-
-                    <div className="quote-plan">
-
-                        {quote.planName}
-
-                    </div>
+                    <div className="text-sm text-gray-500">{quote.planName}</div>
 
                 </div>
 
-                <div className="quote-price-block">
 
-                    {
 
-                        quote.originalPrice &&
+                <div className="text-right">
 
-                        <div className="quote-price-orig">
+                    {quote.originalPrice && (
+
+                        <div className="text-xs text-gray-400 line-through">
 
                             {money(quote.originalPrice)}
 
                         </div>
 
-                    }
+                    )}
 
-                    <div className="quote-price">
+                    <div className="text-xl font-bold text-[#111518]">
 
-                        {money(quote.price)}
+                        {money(quote.price * .9)}
 
                     </div>
 
@@ -138,77 +176,81 @@ export default function QuoteCard({
 
             </div>
 
-            {
 
-                quote.categoryLabel &&
 
-                <span className="quote-cat">
+            <div className="flex flex-wrap gap-2 mt-3">
 
-                    {quote.categoryLabel}
+                {quote.categoryLabel && (
 
-                </span>
+                    <span className="text-xs font-medium text-[#234d6d] bg-[#234d6d]/10 rounded-full px-3 py-1">
 
-            }
+                        {quote.categoryLabel}
 
-            {
+                    </span>
 
-                quote.hasPromotion &&
+                )}
 
-                <span className="quote-promo">
+                {quote.hasPromotion && (
 
-                    {quote.promotionLabel}
+                    <span className="text-xs font-medium text-white bg-blue-950 rounded-full px-3 py-1">
 
-                </span>
+                        {quote.promotionLabel}
 
-            }
+                    </span>
 
-            {
-
-                quote.highlights?.length > 0 &&
-
-                <div className="quote-highlights">
-
-                    {
-
-                        quote.highlights.map((h, i) => (
-
-                            <span key={i}>
-
-                                {h}
-
-                            </span>
-
-                        ))
-
-                    }
-
-                </div>
-
-            }
-
-            <div className="quote-sum">
-
-                Suma asegurada
-
-                <strong>
-
-                    {" "}
-
-                    {money(quote.insuredValue)}
-
-                </strong>
+                )}
 
             </div>
 
-            {
 
-                !showPhone &&
+
+            {highlights.length > 0 && (
+
+                <div className="flex flex-wrap gap-2 mt-3">
+
+                    {highlights.map((h, i) => (
+
+                        <span
+
+                            key={i}
+
+                            className="text-xs text-gray-600 border border-[#f0f3f4] rounded-full px-3 py-1"
+
+                        >
+
+                            {h}
+
+                        </span>
+
+                    ))}
+
+                </div>
+
+            )}
+
+
+
+            <div className="text-sm text-gray-500 mt-4">
+
+                Suma asegurada{" "}
+
+                <strong className="text-[#111518]">{money(quote.insuredValue)}</strong>
+
+            </div>
+
+
+
+            {!showPhone && (
 
                 <button
 
-                    className="quote-hire-btn"
-
                     onClick={() => setShowPhone(true)}
+
+                    className="mt-4 w-full bg-blue-950 hover:bg-blue-900 text-white text-sm font-bold
+
+                               h-10 px-6 rounded-full transition-all shadow-md hover:shadow-lg
+
+                               transform hover:-translate-y-0.5"
 
                 >
 
@@ -216,15 +258,15 @@ export default function QuoteCard({
 
                 </button>
 
-            }
+            )}
 
-            {
 
-                showPhone &&
+
+            {showPhone && (
 
                 <>
 
-                    <div className="quote-phone-form">
+                    <div className="flex gap-2 mt-4">
 
                         <input
 
@@ -236,6 +278,10 @@ export default function QuoteCard({
 
                             onChange={e => setPhone(e.target.value)}
 
+                            className="flex-1 border border-[#f0f3f4] rounded-lg px-3 py-2 text-sm
+
+                                       focus:outline-none focus:border-[#234d6d]"
+
                         />
 
                         <button
@@ -243,6 +289,12 @@ export default function QuoteCard({
                             disabled={sending}
 
                             onClick={enviar}
+
+                            className="bg-blue-950 hover:bg-blue-900 disabled:opacity-50 text-white
+
+                                       text-sm font-bold px-5 rounded-full transition-all shadow-md
+
+                                       hover:shadow-lg transform hover:-translate-y-0.5"
 
                         >
 
@@ -252,7 +304,7 @@ export default function QuoteCard({
 
                     </div>
 
-                    <div className="quote-phone-hint">
+                    <div className="text-xs text-gray-500 mt-2">
 
                         Te vamos a contactar a la brevedad.
 
@@ -260,19 +312,21 @@ export default function QuoteCard({
 
                 </>
 
-            }
+            )}
 
-            {
 
-                message &&
 
-                <div className="status">
+            {message && (
+
+                <div className="text-sm font-medium text-[#234d6d] mt-3">
 
                     {message}
 
                 </div>
 
-            }
+            )}
+
+
 
         </div>
 

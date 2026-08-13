@@ -1,11 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 import Filters from "./Filters";
 import Ticket from "./Ticket";
 import QuoteList from "./QuoteList";
-
-import "./cotizador.css";
-
 
 import {
     getYears,
@@ -16,129 +13,168 @@ import {
     quote
 } from "./api";
 
+const PROGRESS_MESSAGES = [
+    "Consultando aseguradoras...",
+    "Revisando coberturas disponibles...",
+    "Comparando precios...",
+    "Casi listo, un momento más..."
+];
+
 export default function Cotizador() {
 
     const [years, setYears] = useState([]);
     const [brands, setBrands] = useState([]);
-    const [models, setModels] = useState([]);
-    const [versions, setVersions] = useState([]);
 
     const [year, setYear] = useState("");
     const [brand, setBrand] = useState("");
-    const [model, setModel] = useState("");
-    const [version, setVersion] = useState("");
 
+    // Modelo + versión combinados
+    const [modelVersions, setModelVersions] = useState([]);
+    const [loadingModelVersions, setLoadingModelVersions] = useState(false);
+    const [modelVersion, setModelVersion] = useState(""); // key seleccionada
+    const [selectedMV, setSelectedMV] = useState(null); // { model, description, infoauto }
+
+    // Código postal + localidades
     const [cp, setCp] = useState("");
-
+    const [locations, setLocations] = useState([]);
     const [location, setLocation] = useState(null);
+
+    const [hasGNC, setHasGNC] = useState(false);
 
     const [quotes, setQuotes] = useState([]);
 
     const [loading, setLoading] = useState(false);
-
     const [status, setStatus] = useState("");
 
+    const [progressMsg, setProgressMsg] = useState(PROGRESS_MESSAGES[0]);
+    const [progress, setProgress] = useState(0);
+    const progressRef = useRef(null);
+
     useEffect(() => {
-
         async function cargar() {
-
             const res = await getYears();
-
             setYears(res.data);
-
         }
-
         cargar();
-
     }, []);
+
     useEffect(() => {
-
         if (!year) return;
-
         async function cargar() {
-
             setLoading(true);
-
             const res = await getBrands(year);
-
             setBrands(res.data);
-
             setLoading(false);
-
         }
-
         cargar();
-
     }, [year]);
+
+    // Al elegir marca: traigo modelos y sus versiones en paralelo
     useEffect(() => {
 
         if (!brand) return;
 
         async function cargar() {
 
-            const res = await getModels(year, brand);
+            setLoadingModelVersions(true);
+            setModelVersions([]);
+            setModelVersion("");
+            setSelectedMV(null);
 
-            setModels(res.data);
+            const resModels = await getModels(year, brand);
+            const models = resModels.data;
+
+            const results = await Promise.all(
+                models.map(m => getVersions(year, brand, m))
+            );
+
+            const combined = [];
+
+            models.forEach((m, i) => {
+                const versions = results[i].data;
+                versions.forEach(v => {
+                    combined.push({
+                        model: m,
+                        description: v.description,
+                        infoauto: v.infoauto
+                    });
+                });
+            });
+
+            setModelVersions(combined);
+            setLoadingModelVersions(false);
 
         }
 
         cargar();
 
     }, [brand]);
+
+    // Al elegir CP: traigo todas las localidades posibles
     useEffect(() => {
 
-        if (!model) return;
-
-        async function cargar() {
-
-            const res = await getVersions(year, brand, model);
-
-            setVersions(res.data);
-
+        if (cp.length !== 4) {
+            setLocations([]);
+            setLocation(null);
+            return;
         }
 
-        cargar();
-
-    }, [model]);
-
-    useEffect(() => {
-
-        if (cp.length !== 4) return;
-
         async function buscar() {
-
             try {
-
                 const res = await getLocation(cp);
-
-                setLocation(res.data[0]);
-
-            }
-
-            catch {
-
+                setLocations(res.data || []);
                 setLocation(null);
-
+            } catch {
+                setLocations([]);
+                setLocation(null);
             }
-
         }
 
         buscar();
 
     }, [cp]);
 
+    function startProgress() {
+
+        let step = 0;
+        setProgress(0);
+        setProgressMsg(PROGRESS_MESSAGES[0]);
+
+        progressRef.current = setInterval(() => {
+
+            step += 1;
+
+            setProgress(prev => Math.min(prev + 12, 92));
+
+            if (step < PROGRESS_MESSAGES.length) {
+                setProgressMsg(PROGRESS_MESSAGES[step]);
+            }
+
+        }, 900);
+
+    }
+
+    function stopProgress() {
+
+        if (progressRef.current) {
+            clearInterval(progressRef.current);
+            progressRef.current = null;
+        }
+
+        setProgress(100);
+
+    }
+    useEffect(() => () => stopProgress(), []);
+
     async function cotizar() {
 
-        const v = versions.find(
-            x => x.description === version
-        );
-
-        if (!v || !location) return;
+        if (!selectedMV || !location) return;
 
         try {
 
             setLoading(true);
-            setStatus("Consultando cotizaciones...");
+            setStatus("");
+            startProgress();
 
             const body = {
                 client: {
@@ -154,107 +190,138 @@ export default function Cotizador() {
                 },
                 vehicle: {
                     brand,
-                    model,
+                    model: selectedMV.model,
                     year: Number(year),
-                    version,
-                    codigoInfoAuto: v.infoauto,
-                    hasGNC: false,
+                    version: selectedMV.description,
+                    codigoInfoAuto: selectedMV.infoauto,
+                    hasGNC: hasGNC, // <-- Pasa el estado real
                     isZeroKm: false
                 }
             };
 
             const res = await quote(body);
-
             setQuotes(res.data.quotes || []);
-            setStatus("");
 
         } catch (err) {
-
             console.error(err);
-
             setStatus("No se pudieron obtener las cotizaciones.");
-
         } finally {
-
-            setLoading(false);
-
+            stopProgress();
+            setTimeout(() => setLoading(false), 400);
         }
 
     }
 
+    const showResults = !loading && quotes.length > 0;
+
     return (
 
-        <>
-            <Filters
+        <div className="w-[70%] mx-auto py-8">
 
-                years={years}
-                brands={brands}
-                models={models}
-                versions={versions}
+            {/* VISTA 1: Formulario de Cotización / Filtros */}
+            {!showResults && (
+                <>
+                    <Filters
+                        years={years}
+                        brands={brands}
 
-                year={year}
-                brand={brand}
-                model={model}
-                version={version}
+                        year={year}
+                        brand={brand}
+                        setYear={setYear}
+                        setBrand={setBrand}
 
-                setYear={setYear}
-                setBrand={setBrand}
-                setModel={setModel}
-                setVersion={setVersion}
+                        modelVersions={modelVersions}
+                        loadingModelVersions={loadingModelVersions}
+                        modelVersion={modelVersion}
+                        setModelVersion={key => {
+                            setModelVersion(key);
+                            const found = modelVersions.find(
+                                mv => `${mv.model}|${mv.description}` === key
+                            );
+                            setSelectedMV(found || null);
+                        }}
 
-                cp={cp}
-                setCp={setCp}
+                        cp={cp}
+                        setCp={setCp}
+                        locations={locations}
+                        location={location}
+                        setLocation={setLocation}
+                        hasGNC={hasGNC}
+                        setHasGNC={setHasGNC}
+                    />
 
-            />
+                    {selectedMV && location && (
+                        <div className="bg-white/90 backdrop-blur-md rounded-lg shadow-lg border border-[#f0f3f4] p-6 mt-4">
+                            <button
+                                onClick={cotizar}
+                                disabled={loading}
+                                className="w-full bg-blue-950 hover:bg-blue-900 disabled:opacity-50
+                                           disabled:hover:translate-y-0 text-white text-sm font-bold
+                                           h-10 px-6 rounded-full transition-all shadow-md
+                                           hover:shadow-lg transform hover:-translate-y-0.5"
+                            >
+                                {loading ? "Cotizando..." : "Cotizar seguro"}
+                            </button>
 
-            <Ticket
+                            {loading && (
+                                <div className="mt-4">
+                                    <div className="w-full h-2 bg-[#f0f3f4] rounded-full overflow-hidden">
+                                        <div
+                                            className="h-full bg-[#234d6d] rounded-full transition-all duration-500 ease-out"
+                                            style={{ width: `${progress}%` }}
+                                        />
+                                    </div>
+                                    <div className="text-sm font-medium text-[#234d6d] text-center mt-2">
+                                        {progressMsg}
+                                    </div>
+                                </div>
+                            )}
 
-                year={year}
-                brand={brand}
-                model={model}
-                version={version}
-                location={location}
+                            {!loading && status && (
+                                <div className="text-sm font-medium text-red-600 text-center mt-3">
+                                    {status}
+                                </div>
+                            )}
+                        </div>
+                    )}
+                </>
+            )}
 
-            />
-
-
-            {
-                version && location && (
-                    <div className="card" style={{ marginTop: "16px" }}>
-
+            {/* VISTA 2: Resultados de Cotización (Ticket + QuoteList) */}
+            {showResults && (
+                <div className="space-y-6">
+                    <div className="flex justify-between items-center mb-2">
                         <button
-                            className="btn"
-                            onClick={cotizar}
-                            disabled={loading}
+                            onClick={() => setQuotes([])}
+                            className="text-sm font-semibold text-[#234d6d] hover:underline flex items-center gap-1"
                         >
-                            {loading ? "Cotizando..." : "Cotizar seguro"}
+                            ← Modificar búsqueda
                         </button>
-
-                        {status && (
-                            <div className="status">
-                                {status}
-                            </div>
-                        )}
-
                     </div>
-                )
-            }
 
-            <QuoteList
-                quotes={quotes}
-                vehicle={{
-                    brand,
-                    model,
-                    year: Number(year),
-                    version,
-                    infoauto: versions.find(
-                        v => v.description === version
-                    )?.infoauto
-                }}
-                location={location}
-            />
+                    <Ticket
+                        year={year}
+                        brand={brand}
+                        model={selectedMV.model}
+                        version={selectedMV.description}
+                        location={location}
+                    />
 
-        </>
+                    <QuoteList
+                        quotes={quotes}
+                        vehicle={{
+                            brand,
+                            model: selectedMV.model,
+                            year: Number(year),
+                            version: selectedMV.description,
+                            infoauto: selectedMV.infoauto
+                        }}
+                        location={location}
+                    />
+                </div>
+            )}
+
+        </div>
 
     );
 

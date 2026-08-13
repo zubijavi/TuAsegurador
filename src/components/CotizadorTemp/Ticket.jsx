@@ -20,7 +20,7 @@ export default function Ticket({ year, brand, model, version, location }) {
 
             {/* Localidad al mismo nivel a la derecha */}
             {location && (
-                <div className="flex items-center gap-1.5 text-xs sm:text-sm font-medium text-slate-500 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-100 flex-shrink-0">
+                <div className="flex items-center gap-1.5 text-xs sm:text-sm font-medium text-slate-500 bg-slate-50 px-3 py-1.5 rounded-lg border border-slate-100 shrink-0">
                     <span className="text-base leading-none">📍</span>
                     <span>
                         <strong className="text-slate-700">{location.localidad}</strong>

@@ -17,6 +17,11 @@ const PROGRESS_MESSAGES = [
     "Consultando aseguradoras...",
     "Revisando coberturas disponibles...",
     "Comparando precios...",
+    "Verificando descuentos y promociones...",
+       "Consultando aseguradoras...",
+    "Revisando coberturas disponibles...",
+    "Comparando precios...",
+    "Verificando descuentos y promociones...",
     "Casi listo, un momento más..."
 ];
 
@@ -150,7 +155,7 @@ export default function Cotizador() {
                 setProgressMsg(PROGRESS_MESSAGES[step]);
             }
 
-        }, 900);
+        }, 2500);
 
     }
 
@@ -293,7 +298,7 @@ export default function Cotizador() {
                     <div className="flex justify-between items-center mb-2">
                         <button
                             onClick={() => setQuotes([])}
-                            className="text-sm font-semibold text-[#234d6d] hover:underline flex items-center gap-1"
+                            className="text-sm font-semibold text-[#234d6d] hover:underline flex items-center gap-1 pointer"
                         >
                             ← Modificar búsqueda
                         </button>

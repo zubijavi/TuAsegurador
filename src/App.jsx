@@ -22,14 +22,14 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/seguro-automotor" element={<SeguroAutomotor />} />
-        <Route path="/seguro-agro" element={<SeguroAgro />} />
-        <Route path="/cotizador" element={<Cotizador />} />
+        <Route path="/" element={<Cotizador />} />
+        {/* <Route path="/seguro-automotor" element={<SeguroAutomotor />} /> */}
+        {/* <Route path="/seguro-agro" element={<SeguroAgro />} /> */}
+        {/* <Route path="/cotizador" element={<Cotizador />} /> */}
 
       </Routes>
       <UnderConst />
-      <Ventajas />
+      {/* <Ventajas /> */}
       {/* <Whatsapp /> */}
       <Footer />
     </>

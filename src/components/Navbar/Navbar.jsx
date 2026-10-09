@@ -21,22 +21,22 @@ function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-                <Link
+                {/* <Link
               to="/cotizador"
               className="flex items-center gap-1 uppercase text-sm font-medium text-[#234d6d] transition-colors"
             >
               Cotizar Seguro Auto
-            </Link>
+            </Link> */}
             {/* Submenu Desktop */}
-            <div className="relative group ">
+            {/* <div className="relative group ">
               <a
                 className="flex items-center gap-1  text-sm font-medium text-[#234d6d] transition-colors"
 
               >
                 Coberturas
-                {/* <span className="material-symbols-outlined text-sm">
+                <span className="material-symbols-outlined text-sm">
                   expand_more
-                </span> */}
+                </span>
               </a>
 
               <div className="absolute left-0 top-full mt-2 w-48 bg-white dark:bg-[#101a22] rounded-lg shadow-lg border border-gray-200 dark:border-gray-800 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2 z-50">
@@ -53,7 +53,7 @@ function Navbar() {
                   Cultivos
                 </Link>
               </div>
-            </div>
+            </div> */}
 
             {/* <a
               className="flex items-center gap-1 uppercase text-sm font-medium hover:text-[#234d6d] transition-colors"

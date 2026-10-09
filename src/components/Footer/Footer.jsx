@@ -39,12 +39,7 @@ const Footer = () => {
               <span className="text-green-600">●</span>
               <span className="text-slate-300 ml-2">Sitio en desarrollo</span>
             </div>
-            <div className="hidden lg:flex flex-col items-center justify-between">
-            <h2 className="text-l raleway uppercase">
-              Tu Asegurador
-            </h2>
-            <p className="text-xs">Javier Zubillaga - Productor de Seguros</p>
-            </div>
+        
           </div>
         </div>
 

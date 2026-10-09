@@ -7,14 +7,15 @@ export default function Ticket({ year, brand, model, version, location }) {
             
             {/* Vehículo: Año • Marca • Modelo Versión (todo en la misma altura/línea) */}
             <div className="flex flex-wrap items-center gap-2 text-sm sm:text-base font-bold text-slate-800">
-                <span className="bg-blue-50 text-blue-950 px-2.5 py-0.5 rounded-md font-extrabold text-xs tracking-wide">
-                    {year}
-                </span>
+           
                 <span className="uppercase">{brand}</span>
-                <span className="text-slate-300">•</span>
+                {/* <span className="text-slate-300">•</span> */}
                 <span className="uppercase text-blue-950">{model}</span>
                 <span className="text-slate-600 font-medium normal-case">
                     {version}
+                </span>
+                     <span className="bg-blue-50 text-blue-950 px-2.5 py-0.5 rounded-md font-extrabold text-xs tracking-wide">
+                    {year}
                 </span>
             </div>
 

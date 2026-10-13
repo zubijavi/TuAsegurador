@@ -12,26 +12,29 @@ import SeguroAutomotor from './pages/SeguroAutomotor';
 import SeguroAgro from './pages/SeguroAgro';
 import Cotizador from "./components/CotizadorTemp/Cotizador";
 
+import VersionNueva from './components/VersionNueva/VersionNueva';
+
 import './App.css';
 
 function App() {
   return (
     <>
+    <VersionNueva/>
 
-      <ScrollToTop />
-      <Navbar />
+      {/* <ScrollToTop /> */}
+      {/* <Navbar /> */}
 
       <Routes>
-        <Route path="/" element={<Cotizador />} />
+        {/* <Route path="/" element={<Cotizador />} /> */}
         {/* <Route path="/seguro-automotor" element={<SeguroAutomotor />} /> */}
         {/* <Route path="/seguro-agro" element={<SeguroAgro />} /> */}
         {/* <Route path="/cotizador" element={<Cotizador />} /> */}
 
       </Routes>
-      <UnderConst />
+      {/* <UnderConst /> */}
       {/* <Ventajas /> */}
       {/* <Whatsapp /> */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

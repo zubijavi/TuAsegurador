@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import Icon from "./Icon";
-import { CATEGORIES } from "../Data/cotizadorData";
+import { CATEGORIES } from "../data/cotizadorData";
 
 const HERO_IMG =
     "https://lh3.googleusercontent.com/aida-public/AB6AXuBHnku1MpWnmgsBGRrB3lBlgzKhsnzuzsA05-f0hJLEy9lYh";

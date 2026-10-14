@@ -1,5 +1,5 @@
 import Icon from "./Icon";
-import { BENEFITS } from "../Data/cotizadorData";
+import { BENEFITS } from "../data/cotizadorData";
 
 // Lista de beneficios con tilde verde
 export default function BenefitsList() {

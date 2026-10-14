@@ -1,5 +1,5 @@
 import Icon from "./Icon";
-import { COVERAGES } from "../Data/cotizadorData";
+import { COVERAGES } from "../data/cotizadorData";
 
 export default function CoverageSelector({ tier, onChange }) {
     return (

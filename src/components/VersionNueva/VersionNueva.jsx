@@ -7,7 +7,7 @@ import VehicleForm from "./components/VehicleForm";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 // import BottomNav from "./components/BottomNav";
-import {BRANDS, COVERAGES, PARTNERS} from "./Data/cotizadorData";
+import {BRANDS, COVERAGES, PARTNERS} from "./data/cotizadorData";
 import './VersionNueva.css';
 
 

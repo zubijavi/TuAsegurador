@@ -2,16 +2,7 @@
 export const CATEGORIES = [
   { id: "auto", label: "Auto", icon: "directions_car" },
   { id: "moto", label: "Moto", icon: "two_wheeler" },
-  { id: "hogar", label: "Hogar", icon: "roofing" },
-  { id: "maquinaria", label: "Maquinaria Agricola", icon: "agriculture" },
-  { id: "cultivos", label: "Cultivos", icon: "wheat" },
-  { id: "art", label: "ART", icon: "factory" },
-  {
-    id: "accidentes",
-    label: "Accidentes Personales",
-    mobileLabel: "Accidentes",
-    icon: "personal_injury",
-  },
+
 ];
 
 export const BRANDS = [

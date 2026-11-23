@@ -3,7 +3,7 @@ import { COVERAGES } from "../data/cotizadorData";
 
 export default function CoverageSelector({ tier, onChange }) {
     return (
-        <div className="flex flex-col gap-space-md lg:pt-space-xs">
+        <div className="flex flex-col gap-space-md lg:pt-space-xs borde">
             <div className="flex items-center justify-between">
                 <span className="font-label-md text-label-md text-on-surface lg:font-headline-sm lg:text-headline-sm">
                     Nivel de cobertura sugerida
